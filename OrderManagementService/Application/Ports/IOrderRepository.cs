@@ -8,6 +8,7 @@ namespace OrderManagementService.Application.Ports
         Task<Order> GetOrderByIdAsync(Guid orderId);
         Task<IEnumerable<Order>> GetOrdersByRestaurantAndStatusAsync(Guid restaurantId, string status);
         Task AddOrderAsync(Order order);
+        Task UpdateOrderAsync(Order order);
     }
 
 

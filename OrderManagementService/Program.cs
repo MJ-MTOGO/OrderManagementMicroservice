@@ -3,6 +3,7 @@ using OrderManagementService.Infrastructure;
 using OrderManagementService.Infrastructure.Publishers;
 using OrderManagementService.Application.Ports;
 using OrderManagementService.Infrastructure.Adapters;
+using OrderManagementService.Infrastructure.Subscribers;
 
 namespace OrderManagementService
 {
@@ -22,7 +23,7 @@ namespace OrderManagementService
                 ));
 
             // Register IMessageBus with GooglePubSubMessageBus
-            builder.Services.AddSingleton<IMessageBus>(sp =>
+            builder.Services.AddSingleton<IMessageBus, GooglePubSubMessageBus>(sp =>
                 new GooglePubSubMessageBus(builder.Configuration["GoogleCloud:ProjectId"]));
 
             // Register IMessagePublisher with MessagePublisher
@@ -30,6 +31,9 @@ namespace OrderManagementService
 
             // Register IOrderRepository with its implementation
             builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+
+            // Register OrderDeliverySubscriber as a singleton
+            builder.Services.AddSingleton<OrderDeliverySubscriber>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -50,6 +54,10 @@ namespace OrderManagementService
             app.UseAuthorization();
 
             app.MapControllers();
+
+            // Start the OrderDeliverySubscriber in a background task
+            var orderDeliverySubscriber = app.Services.GetRequiredService<OrderDeliverySubscriber>();
+            Task.Run(() => orderDeliverySubscriber.StartAsync());
 
             app.Run();
         }
