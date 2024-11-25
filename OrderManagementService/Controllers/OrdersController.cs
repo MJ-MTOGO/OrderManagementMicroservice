@@ -62,7 +62,7 @@ namespace OrderManagementService.Controllers
             var order = await _orderRepository.GetOrderByIdAsync(id);
             return order == null ? NotFound() : Ok(order);
         }
-        //api/order/id
+        //api/order/pending/resId
         [HttpGet("pending/{id}")]
         public async Task<IActionResult> GetPendingOrdersById(Guid id)
         {

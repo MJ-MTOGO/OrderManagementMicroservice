@@ -35,6 +35,18 @@ namespace OrderManagementService
             // Register OrderDeliverySubscriber as a singleton
             builder.Services.AddSingleton<OrderDeliverySubscriber>();
 
+            // Add CORS policy
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowFrontend", policy =>
+                {
+                    policy.WithOrigins("http://localhost:3000") // Your frontend URL
+                          .AllowAnyHeader()
+                          .AllowAnyMethod()
+                          .AllowCredentials(); // Add if credentials like cookies are needed
+                });
+            });
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -48,6 +60,9 @@ namespace OrderManagementService
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            // Use the CORS policy
+            app.UseCors("AllowFrontend");
 
             app.UseHttpsRedirection();
 
