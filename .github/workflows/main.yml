@@ -19,11 +19,17 @@ jobs:
         with:
           credentials_json: ${{ secrets.GCP_CREDENTIALS }}
 
-      # Step 3: Configure kubectl
+      # Step 3: Install gke-gcloud-auth-plugin
+      - name: Install gke-gcloud-auth-plugin
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y google-cloud-sdk-gke-gcloud-auth-plugin
+
+      # Step 4: Configure kubectl
       - name: Configure kubectl
         run: gcloud container clusters get-credentials cluster-1 --region europe-north1-a
 
-      # Step 4: Run Unit Tests
+      # Step 5: Run Unit Tests
       - name: Run Unit Tests
         working-directory: ./OrderManagementServiceTests
         run: |
@@ -32,25 +38,25 @@ jobs:
           # Run tests with XML results output
           dotnet test OrderManagementServiceTests.csproj --no-build --verbosity normal --logger:"trx;LogFileName=TestResults.trx"
 
-      # Step 5: Upload Test Results as Artifact
+      # Step 6: Upload Test Results as Artifact
       - name: Upload Test Results
         uses: actions/upload-artifact@v3
         with:
           name: test-results
           path: ./OrderManagementServiceTests/TestResults.trx
 
-      # Step 6: Configure Docker to use gcloud as a credential helper
+      # Step 7: Configure Docker to use gcloud as a credential helper
       - name: Configure Docker
         run: gcloud auth configure-docker
 
-      # Step 7: Build and Push Docker Image
+      # Step 8: Build and Push Docker Image
       - name: Build and Push Docker Image
         working-directory: ./OrderManagementService
         run: |
           docker build -t gcr.io/mtogov1/order-management-service:latest -f Dockerfile .
           docker push gcr.io/mtogov1/order-management-service:latest
 
-      # Step 8: Deploy to Kubernetes
+      # Step 9: Deploy to Kubernetes
       - name: Deploy to Kubernetes
         working-directory: ./kubernetes-configs
         run: |
