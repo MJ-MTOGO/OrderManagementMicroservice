@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: order-management-service
-          image: gcr.io/mtogo-439509/order-management-service:latest # Replace with your Docker image
+          image: gcr.io/mtogov1/order-management-service:latest # Replace with your Docker image
           ports:
             - containerPort: 8080 # The container's exposed port
           env:
