@@ -4,6 +4,7 @@ using OrderManagementService.Infrastructure.Publishers;
 using OrderManagementService.Application.Ports;
 using OrderManagementService.Infrastructure.Adapters;
 using OrderManagementService.Infrastructure.Subscribers;
+using OrderManagementService.Application.Services;
 
 namespace OrderManagementService
 {
@@ -31,9 +32,11 @@ namespace OrderManagementService
 
             // Register IOrderRepository with its implementation
             builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+            builder.Services.AddScoped<IPaymentService, PaymentService>();
 
             // Register OrderDeliverySubscriber as a singleton
             builder.Services.AddSingleton<OrderDeliverySubscriber>();
+
 
             // Add CORS policy
             builder.Services.AddCors(options =>

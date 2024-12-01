@@ -64,6 +64,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "OrderManagementService.Controllers.PaymentController",
+    "Method": "ProcessPayment",
+    "RelativePath": "api/Payment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "OrderManagementService.Application.DTOs.PaymentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "OrderManagementService.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
