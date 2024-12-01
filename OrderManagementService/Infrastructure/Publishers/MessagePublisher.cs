@@ -24,7 +24,6 @@ namespace OrderManagementService.Infrastructure.Publishers
                     deliveryAddress.PostalCode
                 }
             };
-
             await _messageBus.PublishAsync("OrderCreated", message);
         }
     }

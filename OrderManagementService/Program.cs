@@ -36,6 +36,7 @@ namespace OrderManagementService
 
             // Register OrderDeliverySubscriber as a singleton
             builder.Services.AddSingleton<OrderDeliverySubscriber>();
+            builder.Services.AddSingleton<ReadyToPickupSubscriber>();
 
 
             // Add CORS policy
@@ -75,7 +76,9 @@ namespace OrderManagementService
 
             // Start the OrderDeliverySubscriber in a background task
             var orderDeliverySubscriber = app.Services.GetRequiredService<OrderDeliverySubscriber>();
+            var readyToPikcupSubscriber = app.Services.GetRequiredService<ReadyToPickupSubscriber>();
             Task.Run(() => orderDeliverySubscriber.StartAsync());
+            Task.Run(() => readyToPikcupSubscriber.StartAsync());
 
             app.Run();
         }

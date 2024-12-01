@@ -11,7 +11,7 @@ namespace OrderManagementService.Domain.Entities
         public Guid RestaurantId { get; private set; }
         public DateTime OrderedTime { get; private set; }
         public decimal TotalPrice => _orderItems.Sum(item => item.Price);
-        public string OrderStatus { get; private set; } // "Pending", "Delivered"
+        public string OrderStatus { get; private set; } // "Pending","ReadyToPickup", "Delivered"
 
         private readonly List<OrderItem> _orderItems = new List<OrderItem>();
         public IReadOnlyCollection<OrderItem> OrderItems => _orderItems.AsReadOnly();
@@ -54,6 +54,13 @@ namespace OrderManagementService.Domain.Entities
                 throw new InvalidOperationException("Order is already delivered.");
 
             OrderStatus = "Delivered";
+        }
+        public void MarkAsReadyToPickup()
+        {   
+            if (OrderStatus == "ReadyToPickup")
+                throw new InvalidOperationException("Order is already ready to pickup.");
+
+            OrderStatus = "ReadyToPickup";
         }
     }
 }
