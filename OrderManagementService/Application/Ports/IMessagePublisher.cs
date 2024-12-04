@@ -4,6 +4,6 @@ namespace OrderManagementService.Application.Ports
 {
     public interface IMessagePublisher
     {
-        Task PublishOrderCreatedAsync(Guid orderId, DeliveryAddress deliveryAddress);
+        Task PublishOrderCreatedAsync(Guid orderId, Guid RestaurantId, DeliveryAddress deliveryAddress);
     }
 }

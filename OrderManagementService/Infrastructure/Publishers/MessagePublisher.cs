@@ -12,11 +12,12 @@ namespace OrderManagementService.Infrastructure.Publishers
             _messageBus = messageBus;
         }
 
-        public async Task PublishOrderCreatedAsync(Guid orderId, DeliveryAddress deliveryAddress)
+        public async Task PublishOrderCreatedAsync(Guid orderId, Guid restaurantId, DeliveryAddress deliveryAddress)
         {
             var message = new
             {
                 OrderId = orderId,
+                RestaurantId = restaurantId,
                 DeliveryAddress = new
                 {
                     deliveryAddress.Street,

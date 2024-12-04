@@ -26,7 +26,7 @@ namespace OrderManagementService.Domain.Entities
             OrderId = Guid.NewGuid();
             CustomerId = customerId;
             RestaurantId = restaurantId;
-            OrderedTime = DateTime.UtcNow;
+            OrderedTime = DateTime.Now;
             OrderStatus = "Pending";
 
             _orderItems.AddRange(orderItems);

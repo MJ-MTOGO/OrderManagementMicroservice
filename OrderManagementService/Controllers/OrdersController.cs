@@ -40,21 +40,14 @@ namespace OrderManagementService.Controllers
             // Create DeliveryAddress
             var deliverAddress = new DeliveryAddress(request.Street, request.City, request.PostalCode);
 
+
             // Publish event
-            await _messagePublisher.PublishOrderCreatedAsync(order.OrderId, deliverAddress);
+            await _messagePublisher.PublishOrderCreatedAsync(order.OrderId, order.RestaurantId ,deliverAddress);
             
             // Return the created order
             return CreatedAtAction(nameof(GetOrderById), new { id = order.OrderId }, order);
         }
 
-        [HttpPost("publish")]
-        public async Task<IActionResult> PublishMessage([FromBody] DeliveryAddress request)
-        {
-            var deliveryAddress = new DeliveryAddress(request.Street, request.City, request.PostalCode);
-            await _messagePublisher.PublishOrderCreatedAsync(Guid.NewGuid(), deliveryAddress);
-
-            return Ok("Message published to Google Cloud Pub/Sub.");
-        }
         //api/order/id
         [HttpGet("{id}")]
         public async Task<IActionResult> GetOrderById(Guid id)
