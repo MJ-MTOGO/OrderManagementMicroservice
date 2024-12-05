@@ -9,6 +9,9 @@ namespace OrderManagementService.Application.Ports
         Task<IEnumerable<Order>> GetOrdersByRestaurantAndStatusAsync(Guid restaurantId, string status);
         Task AddOrderAsync(Order order);
         Task UpdateOrderAsync(Order order);
+
+        Task<IEnumerable<Order>> GetAllOrders(); // Fix: Return Task<IEnumerable<Order>>
+
     }
 
 

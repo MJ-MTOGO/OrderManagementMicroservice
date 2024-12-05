@@ -9,8 +9,8 @@ namespace OrderManagementService.Infrastructure
     public class OrderManagementServiceDbContext : DbContext
     {
         public DbSet<Order> Orders { get; set; }
-        public DbSet<Erning> Ernings { get; set; }
-
+        public DbSet<Earning> Earnings { get; set; }
+            
 
         public OrderManagementServiceDbContext(DbContextOptions<OrderManagementServiceDbContext> options) : base(options)
         {
@@ -38,19 +38,21 @@ namespace OrderManagementService.Infrastructure
             });
 
             // Configure the Erning entity
-            modelBuilder.Entity<Erning>(entity =>
+            modelBuilder.Entity<Earning>(entity =>
             {
-                entity.HasKey(e => e.ErningId); // Primary Key
+                entity.HasKey(e => e.EarningId); // Primary Key
 
-                entity.Property(e => e.MtogoErning)
+                entity.Property(e => e.OrderId);
+
+                entity.Property(e => e.MtogoEarning)
                     .IsRequired()
                     .HasPrecision(18, 2); // Precision for decimal
 
-                entity.Property(e => e.RestaurantErning)
+                entity.Property(e => e.RestaurantEarning)
                     .IsRequired()
                     .HasPrecision(18, 2); // Precision for decimal
 
-                entity.Property(e => e.AgentErning)
+                entity.Property(e => e.AgentEarning)
                     .IsRequired()
                     .HasPrecision(18, 2); // Precision for decimal
             });

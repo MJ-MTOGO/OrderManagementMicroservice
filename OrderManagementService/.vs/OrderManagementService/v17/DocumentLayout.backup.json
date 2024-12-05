@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|c:\\users\\moham\\source\\repos\\exam\\ordermanagementmicroservice\\ordermanagementservice\\infrastructure\\subscribers\\orderdeliverysubscriber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|solutionrelative:infrastructure\\subscribers\\orderdeliverysubscriber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|c:\\users\\moham\\source\\repos\\exam\\ordermanagementmicroservice\\ordermanagementservice\\infrastructure\\subscribers\\calculatedearningssubscriber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|solutionrelative:infrastructure\\subscribers\\calculatedearningssubscriber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|c:\\users\\moham\\source\\repos\\exam\\ordermanagementmicroservice\\ordermanagementservice\\controllers\\earingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|solutionrelative:controllers\\earingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|c:\\users\\moham\\source\\repos\\exam\\ordermanagementmicroservice\\ordermanagementservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +39,58 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderDeliverySubscriber.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Infrastructure\\Subscribers\\OrderDeliverySubscriber.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Subscribers\\OrderDeliverySubscriber.cs",
+              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Infrastructure\\Subscribers\\OrderDeliverySubscriber.cs",
+              "RelativeToolTip": "Infrastructure\\Subscribers\\OrderDeliverySubscriber.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T19:49:03.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CalculatedEarningsSubscriber.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Infrastructure\\Subscribers\\CalculatedEarningsSubscriber.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Subscribers\\CalculatedEarningsSubscriber.cs",
+              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Infrastructure\\Subscribers\\CalculatedEarningsSubscriber.cs",
+              "RelativeToolTip": "Infrastructure\\Subscribers\\CalculatedEarningsSubscriber.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T19:49:02.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAQwDkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T19:41:16.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EaringsController.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Controllers\\EaringsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EaringsController.cs",
+              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Controllers\\EaringsController.cs",
+              "RelativeToolTip": "Controllers\\EaringsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T19:31:12.797Z",
+              "EditorCaption": ""
             }
           ]
         }

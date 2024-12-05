@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "OrderManagementService.Controllers.EaringsController",
+    "Method": "GetAllEarnings",
+    "RelativePath": "api/earnings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "OrderManagementService.Controllers.OrdersController",
     "Method": "CreateOrder",
     "RelativePath": "api/orders",
@@ -13,6 +23,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrderManagementService.Controllers.OrdersController",
+    "Method": "GetAllOrders",
+    "RelativePath": "api/orders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -42,22 +62,6 @@
       {
         "Name": "id",
         "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "OrderManagementService.Controllers.OrdersController",
-    "Method": "PublishMessage",
-    "RelativePath": "api/orders/publish",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "OrderManagementService.Domain.ValueObjects.DeliveryAddress",
         "IsRequired": true
       }
     ],

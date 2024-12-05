@@ -12,8 +12,8 @@ using OrderManagementService.Infrastructure;
 namespace OrderManagementService.Migrations
 {
     [DbContext(typeof(OrderManagementServiceDbContext))]
-    [Migration("20241204201949_AddErningEntity")]
-    partial class AddErningEntity
+    [Migration("20241205100507_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,9 +25,9 @@ namespace OrderManagementService.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("OrderManagementService.Domain.Entities.Erning", b =>
+            modelBuilder.Entity("OrderManagementService.Domain.Entities.Earning", b =>
                 {
-                    b.Property<Guid>("ErningId")
+                    b.Property<Guid>("EarningId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -39,13 +39,16 @@ namespace OrderManagementService.Migrations
                         .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<Guid>("OrderId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<decimal>("RestaurantErning")
                         .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
-                    b.HasKey("ErningId");
+                    b.HasKey("EarningId");
 
-                    b.ToTable("Ernings");
+                    b.ToTable("Earnings");
                 });
 
             modelBuilder.Entity("OrderManagementService.Domain.Entities.Order", b =>

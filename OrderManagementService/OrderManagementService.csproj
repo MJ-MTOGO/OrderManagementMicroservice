@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <Folder Include="Domain\Aggregates\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

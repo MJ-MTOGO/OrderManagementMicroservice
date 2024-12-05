@@ -22,9 +22,9 @@ namespace OrderManagementService.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("OrderManagementService.Domain.Entities.Erning", b =>
+            modelBuilder.Entity("OrderManagementService.Domain.Entities.Earning", b =>
                 {
-                    b.Property<Guid>("ErningId")
+                    b.Property<Guid>("EarningId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -36,13 +36,16 @@ namespace OrderManagementService.Migrations
                         .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<Guid>("OrderId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<decimal>("RestaurantErning")
                         .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
-                    b.HasKey("ErningId");
+                    b.HasKey("EarningId");
 
-                    b.ToTable("Ernings");
+                    b.ToTable("Earnings");
                 });
 
             modelBuilder.Entity("OrderManagementService.Domain.Entities.Order", b =>

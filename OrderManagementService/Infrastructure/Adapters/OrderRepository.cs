@@ -40,6 +40,14 @@ namespace OrderManagementService.Infrastructure.Adapters
             _context.Orders.Update(order);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<IEnumerable<Order>> GetAllOrders()
+        {
+            return await _context.Orders
+                .Include(o => o.OrderItems) // Include related data if necessary
+                .ToListAsync();
+        }
+
     }
 
 }

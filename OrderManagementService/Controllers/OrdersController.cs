@@ -55,6 +55,17 @@ namespace OrderManagementService.Controllers
             var order = await _orderRepository.GetOrderByIdAsync(id);
             return order == null ? NotFound() : Ok(order);
         }
+        //Get all order
+
+        [HttpGet()]
+        public async Task<IActionResult> GetAllOrders()
+        {
+            var orders = await _orderRepository.GetAllOrders();
+            return orders == null || !orders.Any() ? NotFound("No orders found.") : Ok(orders);
+        }
+        //Get all Earnings
+
+    
         //api/order/pending/resId
         [HttpGet("pending/{id}")]
         public async Task<IActionResult> GetPendingOrdersById(Guid id)

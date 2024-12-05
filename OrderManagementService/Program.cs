@@ -34,10 +34,14 @@ namespace OrderManagementService
             builder.Services.AddScoped<IOrderRepository, OrderRepository>();
             builder.Services.AddScoped<IPaymentService, PaymentService>();
 
-            // Register OrderDeliverySubscriber as a singleton
+            // Register IEarningService and IEarningRepository for the CalculatedEarningsSubscriber
+            builder.Services.AddScoped<IEarningService, EarningService>();
+            builder.Services.AddScoped<IEarningRepository, EarningRepository>();
+
+            // Register Subscribers as singletons
             builder.Services.AddSingleton<OrderDeliverySubscriber>();
             builder.Services.AddSingleton<ReadyToPickupSubscriber>();
-
+            builder.Services.AddSingleton<CalculatedEarningsSubscriber>();
 
             // Add CORS policy
             builder.Services.AddCors(options =>
@@ -74,11 +78,14 @@ namespace OrderManagementService
 
             app.MapControllers();
 
-            // Start the OrderDeliverySubscriber in a background task
+            // Start the Subscribers in background tasks
             var orderDeliverySubscriber = app.Services.GetRequiredService<OrderDeliverySubscriber>();
-            var readyToPikcupSubscriber = app.Services.GetRequiredService<ReadyToPickupSubscriber>();
+            var readyToPickupSubscriber = app.Services.GetRequiredService<ReadyToPickupSubscriber>();
+            var calculatedEarningsSubscriber = app.Services.GetRequiredService<CalculatedEarningsSubscriber>();
+
             Task.Run(() => orderDeliverySubscriber.StartAsync());
-            Task.Run(() => readyToPikcupSubscriber.StartAsync());
+            Task.Run(() => readyToPickupSubscriber.StartAsync());
+            Task.Run(() => calculatedEarningsSubscriber.StartAsync());
 
             app.Run();
         }
