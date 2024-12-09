@@ -5,6 +5,7 @@ using OrderManagementService.Application.Ports;
 using OrderManagementService.Infrastructure.Adapters;
 using OrderManagementService.Infrastructure.Subscribers;
 using OrderManagementService.Application.Services;
+using Google.Api;
 
 namespace OrderManagementService
 {
@@ -44,6 +45,7 @@ namespace OrderManagementService
             builder.Services.AddSingleton<CalculatedEarningsSubscriber>();
 
             // Add CORS policy
+
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowFrontend", policy =>

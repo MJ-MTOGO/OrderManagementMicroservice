@@ -183,3 +183,4 @@ C:\Users\moham\source\repos\Exam\OrderManagementMicroservice\OrderManagementServ
 C:\Users\moham\source\repos\Exam\OrderManagementMicroservice\OrderManagementService\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\moham\source\repos\Exam\OrderManagementMicroservice\OrderManagementService\bin\Debug\net8.0\System.Management.dll
 C:\Users\moham\source\repos\Exam\OrderManagementMicroservice\OrderManagementService\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll
+C:\Users\moham\source\repos\Exam\OrderManagementMicroservice\OrderManagementService\bin\Debug\net8.0\firebase-adminsdk-key.json
