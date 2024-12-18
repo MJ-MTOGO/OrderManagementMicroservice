@@ -42,12 +42,11 @@
               "Title": "OrderRepository.cs",
               "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Infrastructure\\Adapters\\OrderRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Adapters\\OrderRepository.cs",
-              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Infrastructure\\Adapters\\OrderRepository.cs*",
-              "RelativeToolTip": "Infrastructure\\Adapters\\OrderRepository.cs*",
+              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Infrastructure\\Adapters\\OrderRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Adapters\\OrderRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T05:34:56.969Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T05:34:56.969Z"
             },
             {
               "$type": "Document",
@@ -55,12 +54,11 @@
               "Title": "IOrderRepository.cs",
               "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Application\\Ports\\IOrderRepository.cs",
               "RelativeDocumentMoniker": "Application\\Ports\\IOrderRepository.cs",
-              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Application\\Ports\\IOrderRepository.cs*",
-              "RelativeToolTip": "Application\\Ports\\IOrderRepository.cs*",
+              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Application\\Ports\\IOrderRepository.cs",
+              "RelativeToolTip": "Application\\Ports\\IOrderRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T05:33:06.417Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T05:33:06.417Z"
             },
             {
               "$type": "Document",
@@ -70,7 +68,7 @@
               "RelativeDocumentMoniker": "Domain\\Entities\\Order.cs",
               "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Domain\\Entities\\Order.cs",
               "RelativeToolTip": "Domain\\Entities\\Order.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA1wEIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-09T05:31:41.085Z",
               "EditorCaption": ""
