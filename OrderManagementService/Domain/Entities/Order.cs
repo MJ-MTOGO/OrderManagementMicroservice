@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 
 namespace OrderManagementService.Domain.Entities
 {
@@ -17,6 +18,25 @@ namespace OrderManagementService.Domain.Entities
         public IReadOnlyCollection<OrderItem> OrderItems => _orderItems.AsReadOnly();
 
         private Order() { } // For EF Core or serialization
+
+        [JsonConstructor]
+        public Order(
+        Guid orderId,
+        Guid customerId,
+        Guid restaurantId,
+        DateTime orderedTime,
+        string orderStatus,
+        List<OrderItem> orderItems
+)
+        {
+            OrderId = orderId;
+            CustomerId = customerId;
+            RestaurantId = restaurantId;
+            OrderedTime = orderedTime;
+            OrderStatus = orderStatus ?? throw new ArgumentNullException(nameof(orderStatus));
+            _orderItems = orderItems ?? throw new ArgumentNullException(nameof(orderItems));
+        }
+
 
         public Order(Guid customerId, Guid restaurantId, List<OrderItem> orderItems)
         {

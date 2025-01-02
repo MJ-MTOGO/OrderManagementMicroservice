@@ -1,5 +1,23 @@
 [
   {
+    "ContainingType": "OrderManagementService.Program\u002B\u003C\u003Ec",
+    "Method": "\u003CMain\u003Eb__0_4",
+    "RelativePath": "",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "OrderManagementService.Controllers.EaringsController",
     "Method": "GetAllEarnings",
     "RelativePath": "api/earnings",

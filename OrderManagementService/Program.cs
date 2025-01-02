@@ -6,6 +6,8 @@ using OrderManagementService.Infrastructure.Adapters;
 using OrderManagementService.Infrastructure.Subscribers;
 using OrderManagementService.Application.Services;
 using Google.Api;
+using Prometheus;
+using System.Text.Json;
 
 namespace OrderManagementService
 {
@@ -57,12 +59,22 @@ namespace OrderManagementService
                 });
             });
 
-            builder.Services.AddControllers();
+            builder.Services.AddControllers()
+               .AddJsonOptions(options =>
+               {
+                   options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase; // Ensure camelCase for JSON
+                   options.JsonSerializerOptions.IncludeFields = true; // Include private fields during deserialization
+               });
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
+
+            app.UseMetricServer(); // Dette aktiverer /metrics endpoint
+            app.UseHttpMetrics(); // Overvåger HTTP-forespørgsler
+            app.MapGet("/", () => "Hello, Prometheus!");
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -80,14 +92,17 @@ namespace OrderManagementService
 
             app.MapControllers();
 
-            // Start the Subscribers in background tasks
-            var orderDeliverySubscriber = app.Services.GetRequiredService<OrderDeliverySubscriber>();
-            var readyToPickupSubscriber = app.Services.GetRequiredService<ReadyToPickupSubscriber>();
-            var calculatedEarningsSubscriber = app.Services.GetRequiredService<CalculatedEarningsSubscriber>();
+            // Conditionally start subscribers
+            if (!app.Environment.IsEnvironment("Testing"))
+            {
+                var orderDeliverySubscriber = app.Services.GetRequiredService<OrderDeliverySubscriber>();
+                var readyToPickupSubscriber = app.Services.GetRequiredService<ReadyToPickupSubscriber>();
+                var calculatedEarningsSubscriber = app.Services.GetRequiredService<CalculatedEarningsSubscriber>();
 
-            Task.Run(() => orderDeliverySubscriber.StartAsync());
-            Task.Run(() => readyToPickupSubscriber.StartAsync());
-            Task.Run(() => calculatedEarningsSubscriber.StartAsync());
+                Task.Run(() => orderDeliverySubscriber.StartAsync());
+                Task.Run(() => readyToPickupSubscriber.StartAsync());
+                Task.Run(() => calculatedEarningsSubscriber.StartAsync());
+            }
 
             app.Run();
         }

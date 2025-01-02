@@ -1,0 +1,36 @@
+﻿using Moq;
+using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
+using Xunit;
+using OrderManagementService.Domain.Entities;
+using OrderManagementService.Infrastructure;
+using OrderManagementService.Infrastructure.Adapters;
+
+namespace OrderManagementServiceTests.UnitTest
+{
+    public class OrderRepositoryTests
+    {
+        [Fact]
+        public async Task AddOrderAsync_ShouldAddOrderToDatabase()
+        {
+            // Arrange
+            var options = new DbContextOptionsBuilder<OrderManagementServiceDbContext>()
+                .UseInMemoryDatabase(databaseName: "TestDb")
+                .Options;
+
+            using var context = new OrderManagementServiceDbContext(options);
+            var repository = new OrderRepository(context);
+
+            var order = new Order(Guid.NewGuid(), Guid.NewGuid(), new List<OrderItem>
+        {
+            new OrderItem("Pizza", 10m)
+        });
+
+            // Act
+            await repository.AddOrderAsync(order);
+
+            // Assert
+            Assert.Contains(order, context.Orders);
+        }
+    }
+}

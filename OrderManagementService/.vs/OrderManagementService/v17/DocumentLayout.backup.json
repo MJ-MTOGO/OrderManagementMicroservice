@@ -3,8 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5F40AF18-F424-4BC4-8204-CD501B82C943}|..\\OrderManagementServiceTests\\OrderManagementServiceTests.csproj|c:\\users\\moham\\source\\repos\\exam\\ordermanagementmicroservice\\ordermanagementservicetests\\intergrationtest\\orderscontrollerintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|c:\\users\\moham\\source\\repos\\exam\\ordermanagementmicroservice\\ordermanagementservice\\domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|solutionrelative:domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|c:\\users\\moham\\source\\repos\\exam\\ordermanagementmicroservice\\ordermanagementservice\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|solutionrelative:controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|c:\\users\\moham\\source\\repos\\exam\\ordermanagementmicroservice\\ordermanagementservice\\application\\dtos\\createorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|solutionrelative:application\\dtos\\createorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|c:\\users\\moham\\source\\repos\\exam\\ordermanagementmicroservice\\ordermanagementservice\\domain\\entities\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|solutionrelative:domain\\entities\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|c:\\users\\moham\\source\\repos\\exam\\ordermanagementmicroservice\\ordermanagementservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F40AF18-F424-4BC4-8204-CD501B82C943}|..\\OrderManagementServiceTests\\OrderManagementServiceTests.csproj|c:\\users\\moham\\source\\repos\\exam\\ordermanagementmicroservice\\ordermanagementservicetests\\unittest\\orderrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|c:\\users\\moham\\source\\repos\\exam\\ordermanagementmicroservice\\ordermanagementservice\\infrastructure\\adapters\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,6 +35,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|c:\\users\\moham\\source\\repos\\exam\\ordermanagementmicroservice\\ordermanagementservice\\application\\ports\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|solutionrelative:application\\ports\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|c:\\users\\moham\\source\\repos\\exam\\ordermanagementmicroservice\\ordermanagementservice\\infrastructure\\publishers\\messagepublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37819C05-29EB-4159-A217-FA477827367C}|OrderManagementService.csproj|solutionrelative:infrastructure\\publishers\\messagepublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +48,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,40 +65,131 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "OrderRepository.cs",
-              "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Infrastructure\\Adapters\\OrderRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Adapters\\OrderRepository.cs",
-              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Infrastructure\\Adapters\\OrderRepository.cs*",
-              "RelativeToolTip": "Infrastructure\\Adapters\\OrderRepository.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T05:34:56.969Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IOrderRepository.cs",
-              "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Application\\Ports\\IOrderRepository.cs",
-              "RelativeDocumentMoniker": "Application\\Ports\\IOrderRepository.cs",
-              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Application\\Ports\\IOrderRepository.cs*",
-              "RelativeToolTip": "Application\\Ports\\IOrderRepository.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T05:33:06.417Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Domain\\Entities\\Order.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Order.cs",
               "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Domain\\Entities\\Order.cs",
               "RelativeToolTip": "Domain\\Entities\\Order.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA1wEIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA3wDsAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T05:31:41.085Z",
+              "WhenOpened": "2025-01-02T15:44:15.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Domain\\Entities\\OrderItem.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Domain\\Entities\\OrderItem.cs",
+              "RelativeToolTip": "Domain\\Entities\\OrderItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T14:42:24.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAmwD4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T13:43:11.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrdersControllerIntegrationTests.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementServiceTests\\IntergrationTest\\OrdersControllerIntegrationTests.cs",
+              "RelativeDocumentMoniker": "..\\OrderManagementServiceTests\\IntergrationTest\\OrdersControllerIntegrationTests.cs",
+              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementServiceTests\\IntergrationTest\\OrdersControllerIntegrationTests.cs",
+              "RelativeToolTip": "..\\OrderManagementServiceTests\\IntergrationTest\\OrdersControllerIntegrationTests.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T12:38:10.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Controllers\\OrdersController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAIwDwAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T10:23:52.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CreateOrderRequest.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Application\\DTOs\\CreateOrderRequest.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\CreateOrderRequest.cs",
+              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Application\\DTOs\\CreateOrderRequest.cs",
+              "RelativeToolTip": "Application\\DTOs\\CreateOrderRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T12:43:01.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderRepositoryTests.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementServiceTests\\UnitTest\\OrderRepositoryTests.cs",
+              "RelativeDocumentMoniker": "..\\OrderManagementServiceTests\\UnitTest\\OrderRepositoryTests.cs",
+              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementServiceTests\\UnitTest\\OrderRepositoryTests.cs",
+              "RelativeToolTip": "..\\OrderManagementServiceTests\\UnitTest\\OrderRepositoryTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T12:03:44.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MessagePublisher.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Infrastructure\\Publishers\\MessagePublisher.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Publishers\\MessagePublisher.cs",
+              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Infrastructure\\Publishers\\MessagePublisher.cs",
+              "RelativeToolTip": "Infrastructure\\Publishers\\MessagePublisher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T10:24:19.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Infrastructure\\Adapters\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Adapters\\OrderRepository.cs",
+              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Infrastructure\\Adapters\\OrderRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Adapters\\OrderRepository.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAswDUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T10:23:06.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IOrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Application\\Ports\\IOrderRepository.cs",
+              "RelativeDocumentMoniker": "Application\\Ports\\IOrderRepository.cs",
+              "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementService\\Application\\Ports\\IOrderRepository.cs",
+              "RelativeToolTip": "Application\\Ports\\IOrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T10:22:56.498Z",
               "EditorCaption": ""
             }
           ]

@@ -22,9 +22,23 @@ namespace OrderManagementService.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateOrder([FromBody] CreateOrderRequest request)
         {
-            // Validate request
+            // Validate request object
             if (request == null || request.OrderItems == null || !request.OrderItems.Any())
                 return BadRequest("Invalid order request. Must contain order items.");
+
+            // Validate each input field explicitly
+            if (string.IsNullOrWhiteSpace(request.Street) ||
+                string.IsNullOrWhiteSpace(request.City) ||
+                string.IsNullOrWhiteSpace(request.PostalCode))
+            {
+                return BadRequest("Address fields cannot be empty.");
+            }
+
+            // Validate order items
+            if (request.OrderItems.Any(item => string.IsNullOrWhiteSpace(item.Name) || item.Price < 0))
+            {
+                return BadRequest("Invalid order items. Item names must be non-empty and prices greater than 0.");
+            }
 
             // Map OrderItems from DTO to Domain objects
             var orderItems = request.OrderItems
@@ -38,15 +52,15 @@ namespace OrderManagementService.Controllers
             await _orderRepository.AddOrderAsync(order);
 
             // Create DeliveryAddress
-            var deliverAddress = new DeliveryAddress(request.Street, request.City, request.PostalCode);
-
+            var deliveryAddress = new DeliveryAddress(request.Street, request.City, request.PostalCode);
 
             // Publish event
-            await _messagePublisher.PublishOrderCreatedAsync(order.OrderId, order.RestaurantId ,deliverAddress);
-            
+            await _messagePublisher.PublishOrderCreatedAsync(order.OrderId, order.RestaurantId, deliveryAddress);
+
             // Return the created order
             return CreatedAtAction(nameof(GetOrderById), new { id = order.OrderId }, order);
         }
+
 
         //api/order/id
         [HttpGet("{id}")]
