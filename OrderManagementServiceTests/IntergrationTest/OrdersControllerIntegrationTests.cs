@@ -44,42 +44,42 @@ namespace OrderManagementServiceTests.IntergrationTest
             _client = _factory.CreateClient();
         }
 
-        [Fact]
-        public async Task CreateOrder_WithValidInput_ShouldReturnCreated()
-        {
-            // Arrange
-            //var request = new CreateOrderRequest
-            //{
-            //    CustomerId = Guid.NewGuid(),
-            //    RestaurantId = Guid.NewGuid(),
-            //    OrderItems = new List<OrderItemRequest>
-            //    {
-            //        new OrderItemRequest { Name = "Pizza", Price = 10m },
-            //        new OrderItemRequest { Name = "Soda", Price = 5m }
-            //    },
-            //    Street = "123 Main St",
-            //    City = "SomeCity",
-            //    PostalCode = "12345",
+        //[Fact]
+        //public async Task CreateOrder_WithValidInput_ShouldReturnCreated()
+        //{
+        //    // Arrange
+        //    //var request = new CreateOrderRequest
+        //    //{
+        //    //    CustomerId = Guid.NewGuid(),
+        //    //    RestaurantId = Guid.NewGuid(),
+        //    //    OrderItems = new List<OrderItemRequest>
+        //    //    {
+        //    //        new OrderItemRequest { Name = "Pizza", Price = 10m },
+        //    //        new OrderItemRequest { Name = "Soda", Price = 5m }
+        //    //    },
+        //    //    Street = "123 Main St",
+        //    //    City = "SomeCity",
+        //    //    PostalCode = "12345",
            
-            //};
+        //    //};
 
-            //// Act
-            //var response = await _client.PostAsJsonAsync("/api/orders", request);
+        //    //// Act
+        //    //var response = await _client.PostAsJsonAsync("/api/orders", request);
 
-            //// Debugging: Log the response body
-            //var jsonResponse = await response.Content.ReadAsStringAsync();
-            //Console.WriteLine($"Response JSON: {jsonResponse}");
+        //    //// Debugging: Log the response body
+        //    //var jsonResponse = await response.Content.ReadAsStringAsync();
+        //    //Console.WriteLine($"Response JSON: {jsonResponse}");
 
-            //// Assert
-            //response.EnsureSuccessStatusCode();
-            //Assert.Equal(System.Net.HttpStatusCode.Created, response.StatusCode);
+        //    //// Assert
+        //    //response.EnsureSuccessStatusCode();
+        //    //Assert.Equal(System.Net.HttpStatusCode.Created, response.StatusCode);
 
-            //var createdOrder = await response.Content.ReadFromJsonAsync<Order>();
-            //Assert.NotNull(createdOrder);
-            //Assert.Equal(request.CustomerId, createdOrder.CustomerId);
-            //Assert.Equal(request.RestaurantId, createdOrder.RestaurantId);
-            //Assert.Equal(2, createdOrder.OrderItems.Count);
-        }
+        //    //var createdOrder = await response.Content.ReadFromJsonAsync<Order>();
+        //    //Assert.NotNull(createdOrder);
+        //    //Assert.Equal(request.CustomerId, createdOrder.CustomerId);
+        //    //Assert.Equal(request.RestaurantId, createdOrder.RestaurantId);
+        //    //Assert.Equal(2, createdOrder.OrderItems.Count);
+        //}
 
 
         [Fact]
