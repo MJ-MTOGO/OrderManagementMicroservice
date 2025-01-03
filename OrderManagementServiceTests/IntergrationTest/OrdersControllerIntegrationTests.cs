@@ -14,7 +14,7 @@ using OrderManagementService.Infrastructure;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace OrderManagementServiceTests.IntergrationTest
+namespace OrderManagementServiceTests.IntegrationTest
 {
     public class OrdersControllerIntegrationTests : IClassFixture<WebApplicationFactory<Program>>
     {
@@ -22,17 +22,21 @@ namespace OrderManagementServiceTests.IntergrationTest
         private readonly HttpClient _client;
         private readonly ITestOutputHelper _output;
 
-        public OrdersControllerIntegrationTests(WebApplicationFactory<Program> factory)
+        public OrdersControllerIntegrationTests(WebApplicationFactory<Program> factory, ITestOutputHelper output)
         {
-            Console.WriteLine("TEs TEst!123123");
+            _output = output;
+
+            // Set up the test server with an in-memory database
             _factory = factory.WithWebHostBuilder(builder =>
             {
                 builder.ConfigureServices(services =>
                 {
-                    // Replace DbContext with an in-memory database
                     var descriptor = services.SingleOrDefault(
                         d => d.ServiceType == typeof(DbContextOptions<OrderManagementServiceDbContext>));
-                    services.Remove(descriptor);
+                    if (descriptor != null)
+                    {
+                        services.Remove(descriptor);
+                    }
 
                     services.AddDbContext<OrderManagementServiceDbContext>(options =>
                     {
@@ -44,69 +48,179 @@ namespace OrderManagementServiceTests.IntergrationTest
             _client = _factory.CreateClient();
         }
 
-        //[Fact]
-        //public async Task CreateOrder_WithValidInput_ShouldReturnCreated()
-        //{
-        //    // Arrange
-        //    //var request = new CreateOrderRequest
-        //    //{
-        //    //    CustomerId = Guid.NewGuid(),
-        //    //    RestaurantId = Guid.NewGuid(),
-        //    //    OrderItems = new List<OrderItemRequest>
-        //    //    {
-        //    //        new OrderItemRequest { Name = "Pizza", Price = 10m },
-        //    //        new OrderItemRequest { Name = "Soda", Price = 5m }
-        //    //    },
-        //    //    Street = "123 Main St",
-        //    //    City = "SomeCity",
-        //    //    PostalCode = "12345",
-           
-        //    //};
-
-        //    //// Act
-        //    //var response = await _client.PostAsJsonAsync("/api/orders", request);
-
-        //    //// Debugging: Log the response body
-        //    //var jsonResponse = await response.Content.ReadAsStringAsync();
-        //    //Console.WriteLine($"Response JSON: {jsonResponse}");
-
-        //    //// Assert
-        //    //response.EnsureSuccessStatusCode();
-        //    //Assert.Equal(System.Net.HttpStatusCode.Created, response.StatusCode);
-
-        //    //var createdOrder = await response.Content.ReadFromJsonAsync<Order>();
-        //    //Assert.NotNull(createdOrder);
-        //    //Assert.Equal(request.CustomerId, createdOrder.CustomerId);
-        //    //Assert.Equal(request.RestaurantId, createdOrder.RestaurantId);
-        //    //Assert.Equal(2, createdOrder.OrderItems.Count);
-        //}
-
-
         [Fact]
-        public async Task CreateOrder_WithInvalidInput_ShouldReturnBadRequest()
+        public async Task CreateOrder_WithValidInput_ShouldReturnCreated()
         {
-            // Arrange
             var request = new CreateOrderRequest
             {
                 CustomerId = Guid.NewGuid(),
                 RestaurantId = Guid.NewGuid(),
-                Street = string.Empty, // Invalid input
+                OrderItems = new List<OrderItemRequest>
+                {
+                    new OrderItemRequest("Pizza", 10m),
+                    new OrderItemRequest ("Soda", 5m)
+                },
+                Street = "123 Main St",
+                City = "SomeCity",
+                PostalCode = "12345"
+            };
+
+            var response = await _client.PostAsJsonAsync("/api/orders", request);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                var responseBody = await response.Content.ReadAsStringAsync();
+                _output.WriteLine($"Response Body: {responseBody}");
+            }
+
+            response.EnsureSuccessStatusCode();
+            Assert.Equal(System.Net.HttpStatusCode.Created, response.StatusCode);
+
+            var orderResponse = await response.Content.ReadFromJsonAsync<OrderResponseDto>();
+            Assert.NotNull(orderResponse);
+            Assert.Equal(request.CustomerId, orderResponse.CustomerId);
+            Assert.Equal(request.RestaurantId, orderResponse.RestaurantId);
+            Assert.Equal(2, orderResponse.OrderItems.Count);
+        }
+
+        [Fact]
+        public async Task CreateOrder_WithInvalidInput_ShouldReturnBadRequest()
+        {
+            var request = new CreateOrderRequest
+            {
+                CustomerId = Guid.NewGuid(),
+                RestaurantId = Guid.NewGuid(),
+                Street = string.Empty,
                 City = "SomeCity",
                 PostalCode = "12345",
                 OrderItems = new List<OrderItemRequest>
-            {
-                new OrderItemRequest { Name = "Pizza", Price = 10m }
-            }
+                {
+                    new OrderItemRequest ("Pizza", 10m)
+                }
             };
 
-            // Act
             var response = await _client.PostAsJsonAsync("/api/orders", request);
 
-            // Assert
+            if (!response.IsSuccessStatusCode)
+            {
+                var responseBody = await response.Content.ReadAsStringAsync();
+                _output.WriteLine($"Response Body: {responseBody}");
+            }
+
             Assert.Equal(System.Net.HttpStatusCode.BadRequest, response.StatusCode);
 
             var errorMessage = await response.Content.ReadAsStringAsync();
             Assert.Contains("Address fields cannot be empty", errorMessage);
+        }
+
+        [Fact]
+        public async Task GetOrderById_ShouldReturnOrderDetails()
+        {
+            var request = new CreateOrderRequest
+            {
+                CustomerId = Guid.NewGuid(),
+                RestaurantId = Guid.NewGuid(),
+                OrderItems = new List<OrderItemRequest>
+                {
+                    new OrderItemRequest ("Pizza", 10m),
+                    new OrderItemRequest ("Soda", 5m)
+                },
+                Street = "123 Main St",
+                City = "SomeCity",
+                PostalCode = "12345"
+            };
+
+            var createResponse = await _client.PostAsJsonAsync("/api/orders", request);
+            createResponse.EnsureSuccessStatusCode();
+            var createdOrder = await createResponse.Content.ReadFromJsonAsync<OrderResponseDto>();
+
+            var response = await _client.GetAsync($"/api/orders/{createdOrder.OrderId}");
+
+            response.EnsureSuccessStatusCode();
+            var orderResponse = await response.Content.ReadFromJsonAsync<OrderResponseDto>();
+            Assert.NotNull(orderResponse);
+            Assert.Equal(createdOrder.OrderId, orderResponse.OrderId);
+        }
+
+        [Fact]
+        public async Task GetAllOrders_ShouldReturnAllOrders()
+        {
+            var request1 = new CreateOrderRequest
+            {
+                CustomerId = Guid.NewGuid(),
+                RestaurantId = Guid.NewGuid(),
+                OrderItems = new List<OrderItemRequest>
+                {
+                    new OrderItemRequest ("Pizza", 10m)
+                },
+                Street = "123 Main St",
+                City = "SomeCity",
+                PostalCode = "12345"
+            };
+
+            var request2 = new CreateOrderRequest
+            {
+                CustomerId = Guid.NewGuid(),
+                RestaurantId = Guid.NewGuid(),
+                OrderItems = new List<OrderItemRequest>
+                {
+                    new OrderItemRequest ("Soda", 5m)
+                },
+                Street = "456 Main St",
+                City = "OtherCity",
+                PostalCode = "67890"
+            };
+
+            await _client.PostAsJsonAsync("/api/orders", request1);
+            await _client.PostAsJsonAsync("/api/orders", request2);
+
+            var response = await _client.GetAsync("/api/orders");
+
+            response.EnsureSuccessStatusCode();
+            var orders = await response.Content.ReadFromJsonAsync<List<OrderResponseDto>>();
+            Assert.NotNull(orders);
+            Assert.True(orders.Count >= 2);
+        }
+
+        [Fact]
+        public void MarkAsReadyToPickup_ShouldOnlyWorkWhenPending()
+        {
+            // Arrange
+            var order = new Order(Guid.NewGuid(), Guid.NewGuid(), new List<OrderItem>
+        {
+            new OrderItem("Pizza", 10m)
+        });
+
+            // Act
+            order.MarkAsReadyToPickup();
+
+            // Assert
+            Assert.Equal("ReadyToPickup", order.OrderStatus);
+
+            // Try marking as ReadyToPickup again
+            Assert.Throws<InvalidOperationException>(() => order.MarkAsReadyToPickup());
+        }
+
+
+
+
+
+
+    }
+
+    public class OrderResponseDto
+    {
+        public Guid OrderId { get; set; }
+        public Guid CustomerId { get; set; }
+        public Guid RestaurantId { get; set; }
+        public DateTime OrderedTime { get; set; }
+        public string OrderStatus { get; set; }
+        public List<OrderItemDto> OrderItems { get; set; }
+
+        public class OrderItemDto
+        {
+            public string Name { get; set; }
+            public decimal Price { get; set; }
         }
     }
 }

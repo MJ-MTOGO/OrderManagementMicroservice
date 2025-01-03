@@ -1,28 +1,43 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<EnableNETAnalyzers>true</EnableNETAnalyzers>
+		<TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+		<!-- Optional: Enable or disable treating warnings as errors -->
+		<AnalysisLevel>latest</AnalysisLevel>
+		<!-- Ensures the latest .NET analyzer rules are used -->
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Google.Apis.Auth" Version="1.68.0" />
-    <PackageReference Include="Google.Cloud.PubSub.V1" Version="3.19.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.4" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="prometheus-net.AspNetCore" Version="8.2.1" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
-  </ItemGroup>
+	<ItemGroup>
+		<!-- Google API Libraries -->
+		<PackageReference Include="Google.Apis.Auth" Version="1.68.0" />
+		<PackageReference Include="Google.Cloud.PubSub.V1" Version="3.19.0" />
 
-  <ItemGroup>
-    <Folder Include="Domain\Aggregates\" />
-    <Folder Include="Migrations\" />
-  </ItemGroup>
+		<!-- Entity Framework Core -->
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.4" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
+
+		<!-- JSON Handling -->
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+
+		<!-- Monitoring and Prometheus -->
+		<PackageReference Include="prometheus-net.AspNetCore" Version="8.2.1" />
+
+		<!-- Swagger for API Documentation -->
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Explicit Folder Inclusion (not necessary unless folders are needed for build processes) -->
+		<Folder Include="Domain\Aggregates\" />
+		<Folder Include="Migrations\" />
+	</ItemGroup>
 
 </Project>

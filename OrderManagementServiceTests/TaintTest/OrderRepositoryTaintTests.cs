@@ -33,9 +33,9 @@ namespace OrderManagementServiceTests.TaintTest
 
             // Seed data
             var order = new Order(Guid.NewGuid(), restaurantId, new List<OrderItem>
-        {
-            new OrderItem("Pizza", 10m)
-        });
+            {
+                new OrderItem("Pizza", 10m)
+            });
             context.Orders.Add(order);
             await context.SaveChangesAsync();
 
@@ -55,9 +55,9 @@ namespace OrderManagementServiceTests.TaintTest
             var repository = new OrderRepository(context);
 
             var maliciousOrder = new Order(Guid.NewGuid(), Guid.NewGuid(), new List<OrderItem>
-        {
-            new OrderItem("Pizza'; DROP TABLE Orders; --", 10m) // Malicious input
-        });
+            {
+                new OrderItem("Pizza'; DROP TABLE Orders; --", 10m) // Malicious input
+            });
 
             // Act
             await repository.AddOrderAsync(maliciousOrder);
@@ -68,5 +68,30 @@ namespace OrderManagementServiceTests.TaintTest
             Assert.Single(savedOrder.OrderItems); // Ensure no unintended side effects
             Assert.Equal("Pizza'; DROP TABLE Orders; --", savedOrder.OrderItems.First().Name); // Ensure data integrity
         }
+        // Boundary and Edge Cases
+        [Fact]
+        public async Task AddOrderAsync_ShouldHandleExtremePrices()
+        {
+            // Arrange
+            using var context = CreateInMemoryDbContext();
+            var repository = new OrderRepository(context);
+
+            var extremeOrder = new Order(Guid.NewGuid(), Guid.NewGuid(), new List<OrderItem>
+            {
+                new OrderItem("Gold-Plated Burger", decimal.MaxValue),
+                new OrderItem("Free Water", decimal.MinValue)
+            });
+
+            // Act
+            await repository.AddOrderAsync(extremeOrder);
+
+            // Assert
+            var savedOrder = await context.Orders.FirstOrDefaultAsync();
+            Assert.NotNull(savedOrder);
+            Assert.Equal(decimal.MaxValue, savedOrder.OrderItems.First().Price);
+        }
+
+
+
     }
 }

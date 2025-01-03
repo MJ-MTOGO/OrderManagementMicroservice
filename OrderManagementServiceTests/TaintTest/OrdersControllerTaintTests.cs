@@ -39,7 +39,7 @@ namespace OrderManagementServiceTests.TaintTest
                 PostalCode = "12345",
                 OrderItems = new List<OrderItemRequest>
         {
-            new OrderItemRequest { Name = "Pizza'; DROP TABLE Orders; --", Price = 1m }
+            new OrderItemRequest ("Pizza'; DROP TABLE Orders; --", 1m)
         }
             };
 
@@ -67,7 +67,7 @@ namespace OrderManagementServiceTests.TaintTest
                 PostalCode = "12345",
                 OrderItems = new List<OrderItemRequest>
             {
-                new OrderItemRequest { Name = "Pizza", Price = 10m }
+                new OrderItemRequest ("Pizza", 10m)
             }
             };
 

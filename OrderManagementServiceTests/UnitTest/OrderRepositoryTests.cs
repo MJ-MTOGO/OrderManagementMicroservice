@@ -32,5 +32,34 @@ namespace OrderManagementServiceTests.UnitTest
             // Assert
             Assert.Contains(order, context.Orders);
         }
+
+        [Fact]
+        public async Task UpdateOrderAsync_ShouldUpdateOrderInDatabase()
+        {
+            // Arrange
+            var options = new DbContextOptionsBuilder<OrderManagementServiceDbContext>()
+                .UseInMemoryDatabase(databaseName: "TestDb_UpdateOrder")
+                .Options;
+
+            using var context = new OrderManagementServiceDbContext(options);
+            var repository = new OrderRepository(context);
+
+            var order = new Order(Guid.NewGuid(), Guid.NewGuid(), new List<OrderItem>
+    {
+        new OrderItem("Pizza", 10m)
+    });
+
+            context.Orders.Add(order);
+            await context.SaveChangesAsync();
+
+            // Act
+            order.MarkAsDelivered();
+            await repository.UpdateOrderAsync(order);
+
+            // Assert
+            var updatedOrder = await context.Orders.FindAsync(order.OrderId);
+            Assert.Equal("Delivered", updatedOrder.OrderStatus);
+        }
     }
+
 }

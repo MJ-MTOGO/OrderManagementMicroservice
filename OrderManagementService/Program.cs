@@ -59,12 +59,10 @@ namespace OrderManagementService
                 });
             });
 
-            builder.Services.AddControllers()
-               .AddJsonOptions(options =>
-               {
-                   options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase; // Ensure camelCase for JSON
-                   options.JsonSerializerOptions.IncludeFields = true; // Include private fields during deserialization
-               });
+            builder.Services.AddControllers().AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+            });
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

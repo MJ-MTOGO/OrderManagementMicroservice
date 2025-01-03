@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json;
 using OrderManagementService.Domain.Entities;
 using Xunit;
 
@@ -7,7 +8,6 @@ namespace OrderManagementServiceTests.UnitTest
 {
     public class OrderTests
     {
-        //Test for Creating an Order
         [Fact]
         public void CreatingOrder_WithValidData_ShouldInitializeCorrectly()
         {
@@ -15,10 +15,10 @@ namespace OrderManagementServiceTests.UnitTest
             var customerId = Guid.NewGuid();
             var restaurantId = Guid.NewGuid();
             var orderItems = new List<OrderItem>
-        {
-            new OrderItem("Pizza", 10m),
-            new OrderItem("Soda", 2m)
-        };
+            {
+                new OrderItem("Pizza", 10m),
+                new OrderItem("Soda", 2m)
+            };
 
             // Act
             var order = new Order(customerId, restaurantId, orderItems);
@@ -30,7 +30,6 @@ namespace OrderManagementServiceTests.UnitTest
             Assert.Equal(12m, order.TotalPrice);
         }
 
-        //Test for Creating an Order
         [Fact]
         public void CreatingOrder_WithNoOrderItems_ShouldThrowArgumentException()
         {
@@ -42,15 +41,14 @@ namespace OrderManagementServiceTests.UnitTest
             Assert.Throws<ArgumentException>(() => new Order(customerId, restaurantId, new List<OrderItem>()));
         }
 
-        // Test for Updating Order Items
         [Fact]
         public void AddingOrderItem_ShouldIncreaseOrderItemsCount()
         {
             // Arrange
             var order = new Order(Guid.NewGuid(), Guid.NewGuid(), new List<OrderItem>
-    {
-        new OrderItem("Pizza", 10m)
-    });
+            {
+                new OrderItem("Pizza", 10m)
+            });
             var newItem = new OrderItem("Burger", 15m);
 
             // Act
@@ -60,7 +58,7 @@ namespace OrderManagementServiceTests.UnitTest
             Assert.Equal(2, order.OrderItems.Count);
             Assert.Contains(newItem, order.OrderItems);
         }
-        // Test for Updating Order Items
+
         [Fact]
         public void RemovingOrderItem_ShouldDecreaseOrderItemsCount()
         {
@@ -74,17 +72,15 @@ namespace OrderManagementServiceTests.UnitTest
             // Assert
             Assert.Empty(order.OrderItems);
         }
-        
-        
-        // Test for Changing Order Status
+
         [Fact]
         public void MarkAsDelivered_ShouldUpdateOrderStatus()
         {
             // Arrange
             var order = new Order(Guid.NewGuid(), Guid.NewGuid(), new List<OrderItem>
-        {
-            new OrderItem("Pizza", 10m)
-        });
+            {
+                new OrderItem("Pizza", 10m)
+            });
 
             // Act
             order.MarkAsDelivered();
@@ -92,19 +88,117 @@ namespace OrderManagementServiceTests.UnitTest
             // Assert
             Assert.Equal("Delivered", order.OrderStatus);
         }
-        // Test for Changing Order Status
+
         [Fact]
         public void MarkAsDelivered_AlreadyDelivered_ShouldThrowInvalidOperationException()
         {
             // Arrange
             var order = new Order(Guid.NewGuid(), Guid.NewGuid(), new List<OrderItem>
-        {
-            new OrderItem("Pizza", 10m)
-        });
+            {
+                new OrderItem("Pizza", 10m)
+            });
             order.MarkAsDelivered();
 
             // Act & Assert
             Assert.Throws<InvalidOperationException>(() => order.MarkAsDelivered());
         }
+
+        [Fact]
+        public void TotalPrice_ShouldCalculateCorrectly()
+        {
+            // Arrange
+            var orderItems = new List<OrderItem>
+            {
+                new OrderItem("Pizza", 10m),
+                new OrderItem("Burger", 15m)
+            };
+            var order = new Order(Guid.NewGuid(), Guid.NewGuid(), orderItems);
+
+            // Act
+            var totalPrice = order.TotalPrice;
+
+            // Assert
+            Assert.Equal(25m, totalPrice);
+        }
+
+        [Fact]
+        public void MarkAsReadyToPickup_ShouldUpdateOrderStatus()
+        {
+            // Arrange
+            var order = new Order(Guid.NewGuid(), Guid.NewGuid(), new List<OrderItem>
+            {
+                new OrderItem("Pizza", 10m)
+            });
+
+            // Act
+            order.MarkAsReadyToPickup();
+
+            // Assert
+            Assert.Equal("ReadyToPickup", order.OrderStatus);
+        }
+
+        [Fact]
+        public void MarkAsReadyToPickup_AlreadyReady_ShouldThrowInvalidOperationException()
+        {
+            // Arrange
+            var order = new Order(Guid.NewGuid(), Guid.NewGuid(), new List<OrderItem>
+            {
+                new OrderItem("Pizza", 10m)
+            });
+            order.MarkAsReadyToPickup();
+
+            // Act & Assert
+            Assert.Throws<InvalidOperationException>(() => order.MarkAsReadyToPickup());
+        }
+
+     
+
+        [Fact]
+        public void RemovingNonExistentOrderItem_ShouldNotChangeOrderItems()
+        {
+            // Arrange
+            var item = new OrderItem("Pizza", 10m);
+            var order = new Order(Guid.NewGuid(), Guid.NewGuid(), new List<OrderItem> { item });
+            var nonExistentItem = new OrderItem("Burger", 15m);
+
+            // Act
+            order.RemoveOrderItem(nonExistentItem);
+
+            // Assert
+            Assert.Single(order.OrderItems);
+        }
+
+        [Fact]
+        public void OrderItem_WithZeroPrice_ShouldBeAllowed()
+        {
+            // Arrange
+            var item = new OrderItem("Water", 0m);
+
+            // Act & Assert
+            Assert.Equal(0m, item.Price);
+            Assert.Equal("Water", item.Name);
+        }
+        [Fact]
+        public void TotalPrice_ShouldHandleNegativeAndZeroPrices()
+        {
+            // Arrange
+            var orderItems = new List<OrderItem>
+    {
+        new OrderItem("Free Item", 0m),
+        new OrderItem("Discounted Item", -5m)
+    };
+            var order = new Order(Guid.NewGuid(), Guid.NewGuid(), orderItems);
+
+            // Act
+            var totalPrice = order.TotalPrice;
+
+            // Assert
+            Assert.Equal(-5m, totalPrice); // Edge case behavior
+        }
+
+     
+
+
+
     }
 }
