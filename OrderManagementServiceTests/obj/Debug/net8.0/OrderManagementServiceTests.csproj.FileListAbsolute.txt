@@ -574,3 +574,5 @@ C:\Users\moham\source\repos\Exam\OrderManagementMicroservice\OrderManagementServ
 C:\Users\moham\source\repos\Exam\OrderManagementMicroservice\OrderManagementServiceTests\bin\Debug\net8.0\refs\Microsoft.Extensions.Options.dll
 C:\Users\moham\source\repos\Exam\OrderManagementMicroservice\OrderManagementServiceTests\bin\Debug\net8.0\refs\Microsoft.Extensions.Primitives.dll
 C:\Users\moham\source\repos\Exam\OrderManagementMicroservice\OrderManagementServiceTests\bin\Debug\net8.0\refs\System.Diagnostics.DiagnosticSource.dll
+C:\Users\moham\source\repos\Exam\OrderManagementMicroservice\OrderManagementServiceTests\obj\Debug\net8.0\OrderManagementServiceTests.Properties.Resources.resources
+C:\Users\moham\source\repos\Exam\OrderManagementMicroservice\OrderManagementServiceTests\obj\Debug\net8.0\OrderManagementServiceTests.csproj.GenerateResource.cache
