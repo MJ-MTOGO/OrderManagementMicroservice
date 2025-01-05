@@ -14,7 +14,7 @@ namespace OrderManagementServiceTests.Mock
 
         public Task PublishOrderCreatedAsync(Guid orderId, Guid restaurantId, DeliveryAddress deliveryAddress)
         {
-            // Track the messages published
+            // Track the messages published now...
             PublishedMessages.Add((orderId, restaurantId, deliveryAddress));
             return Task.CompletedTask;
         }
