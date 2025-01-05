@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - TestBranche
+      - testbranche
 
 jobs:
   test-build-deploy:
