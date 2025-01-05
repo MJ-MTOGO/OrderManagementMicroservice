@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "OrderManagementServiceTests": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Testing"
+      }
+    }
+  }
+}
