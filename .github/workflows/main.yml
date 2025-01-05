@@ -22,7 +22,7 @@ jobs:
           # Run all tests with results output
           dotnet test OrderManagementServiceTests.csproj --no-build --verbosity normal --logger:"trx;LogFileName=TestResults.trx"
 
-      # Step 3: Upload Test Results
+      # Step 3: Upload Test Results after
       - name: Upload Test Results
         uses: actions/upload-artifact@v3
         with:
