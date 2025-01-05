@@ -29,7 +29,7 @@ namespace OrderManagementServiceTests.UnitTest
             Assert.Equal("Pending", order.OrderStatus);
             Assert.Equal(12m, order.TotalPrice);
         }
-
+        // test add create order
         [Fact]
         public void CreatingOrder_WithNoOrderItems_ShouldThrowArgumentException()
         {
