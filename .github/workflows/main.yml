@@ -16,21 +16,19 @@ jobs:
 
       # Step 2: Set Up Google Cloud Credentials for Tests
       - name: Set Up Google Cloud Credentials
-        env:
-          GOOGLE_APPLICATION_CREDENTIALS: /tmp/gcloud-key.json
         run: |
           echo "${{ secrets.GCP_CREDENTIALS }}" > /tmp/gcloud-key.json
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: /tmp/gcloud-key.json
 
       # Step 3: Run All Tests
       - name: Run All Tests
         working-directory: ./OrderManagementServiceTests
+        run: |
+          dotnet restore OrderManagementServiceTests.csproj
+          dotnet test OrderManagementServiceTests.csproj --no-build --verbosity normal --logger:"trx;LogFileName=TestResults.trx"
         env:
           GOOGLE_APPLICATION_CREDENTIALS: /tmp/gcloud-key.json
-        run: |
-          # Restore dependencies
-          dotnet restore OrderManagementServiceTests.csproj
-          # Run all tests with results output
-          dotnet test OrderManagementServiceTests.csproj --no-build --verbosity normal --logger:"trx;LogFileName=TestResults.trx"
 
       # Step 4: Upload Test Results
       - name: Upload Test Results
@@ -39,7 +37,7 @@ jobs:
           name: test-results
           path: ./OrderManagementServiceTests/TestResults.trx
 
-      # Remaining Steps (Only on main)
+      # Remaining Steps (Only on main branch)
       - name: Authenticate with GCP
         if: github.ref_name == 'main'
         uses: google-github-actions/auth@v1
