@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,19 +17,32 @@ using Xunit.Abstractions;
 
 namespace OrderManagementServiceTests.IntegrationTest
 {
-    public class OrdersControllerIntegrationTests : IClassFixture<WebApplicationFactory<Program>>
-    {
-        private readonly WebApplicationFactory<Program> _factory;
-        private readonly HttpClient _client;
-        private readonly ITestOutputHelper _output;
+
+        public class OrdersControllerIntegrationTests : IClassFixture<WebApplicationFactory<Program>>
+        {
+            private readonly WebApplicationFactory<Program> _factory;
+            private readonly HttpClient _client;
+            private readonly ITestOutputHelper _output;
 
         public OrdersControllerIntegrationTests(WebApplicationFactory<Program> factory, ITestOutputHelper output)
         {
             _output = output;
 
-            // Set up the test server with an in-memory database
+            // Dynamically resolve the content root path relative to the test assembly
+            string contentRoot = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "../../../../OrderManagementService"));
+            _output.WriteLine($"Resolved Content Root Path: {contentRoot}");
+            _output.WriteLine($"Current Directory: {AppContext.BaseDirectory}");
+
+            if (!Directory.Exists(contentRoot))
+            {
+                throw new DirectoryNotFoundException($"Content root directory does not exist: {contentRoot}");
+            }
+
+            // Set up the WebApplicationFactory
             _factory = factory.WithWebHostBuilder(builder =>
             {
+                builder.UseContentRoot(contentRoot);
+
                 builder.ConfigureServices(services =>
                 {
                     var descriptor = services.SingleOrDefault(
@@ -49,41 +63,41 @@ namespace OrderManagementServiceTests.IntegrationTest
         }
 
         [Fact]
-        public async Task CreateOrder_WithValidInput_ShouldReturnCreated()
-        {
-            var request = new CreateOrderRequest
+            public async Task CreateOrder_WithValidInput_ShouldReturnCreated()
             {
-                CustomerId = Guid.NewGuid(),
-                RestaurantId = Guid.NewGuid(),
-                OrderItems = new List<OrderItemRequest>
+                var request = new CreateOrderRequest
+                {
+                    CustomerId = Guid.NewGuid(),
+                    RestaurantId = Guid.NewGuid(),
+                    OrderItems = new List<OrderItemRequest>
                 {
                     new OrderItemRequest("Pizza", 10m),
-                    new OrderItemRequest ("Soda", 5m)
+                    new OrderItemRequest("Soda", 5m)
                 },
-                Street = "123 Main St",
-                City = "SomeCity",
-                PostalCode = "12345"
-            };
+                    Street = "123 Main St",
+                    City = "SomeCity",
+                    PostalCode = "12345"
+                };
 
-            var response = await _client.PostAsJsonAsync("/api/orders", request);
+                var response = await _client.PostAsJsonAsync("/api/orders", request);
 
-            if (!response.IsSuccessStatusCode)
-            {
-                var responseBody = await response.Content.ReadAsStringAsync();
-                _output.WriteLine($"Response Body: {responseBody}");
+                if (!response.IsSuccessStatusCode)
+                {
+                    var responseBody = await response.Content.ReadAsStringAsync();
+                    _output.WriteLine($"Response Body: {responseBody}");
+                }
+
+                response.EnsureSuccessStatusCode();
+                Assert.Equal(System.Net.HttpStatusCode.Created, response.StatusCode);
+
+                var orderResponse = await response.Content.ReadFromJsonAsync<OrderResponseDto>();
+                Assert.NotNull(orderResponse);
+                Assert.Equal(request.CustomerId, orderResponse.CustomerId);
+                Assert.Equal(request.RestaurantId, orderResponse.RestaurantId);
+                Assert.Equal(2, orderResponse.OrderItems.Count);
             }
 
-            response.EnsureSuccessStatusCode();
-            Assert.Equal(System.Net.HttpStatusCode.Created, response.StatusCode);
-
-            var orderResponse = await response.Content.ReadFromJsonAsync<OrderResponseDto>();
-            Assert.NotNull(orderResponse);
-            Assert.Equal(request.CustomerId, orderResponse.CustomerId);
-            Assert.Equal(request.RestaurantId, orderResponse.RestaurantId);
-            Assert.Equal(2, orderResponse.OrderItems.Count);
-        }
-
-        [Fact]
+            [Fact]
         public async Task CreateOrder_WithInvalidInput_ShouldReturnBadRequest()
         {
             var request = new CreateOrderRequest
@@ -187,9 +201,9 @@ namespace OrderManagementServiceTests.IntegrationTest
         {
             // Arrange
             var order = new Order(Guid.NewGuid(), Guid.NewGuid(), new List<OrderItem>
-        {
-            new OrderItem("Pizza", 10m)
-        });
+            {
+                new OrderItem("Pizza", 10m)
+            });
 
             // Act
             order.MarkAsReadyToPickup();
@@ -200,12 +214,6 @@ namespace OrderManagementServiceTests.IntegrationTest
             // Try marking as ReadyToPickup again
             Assert.Throws<InvalidOperationException>(() => order.MarkAsReadyToPickup());
         }
-
-
-
-
-
-
     }
 
     public class OrderResponseDto
