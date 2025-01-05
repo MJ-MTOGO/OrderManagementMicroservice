@@ -40,7 +40,7 @@ namespace OrderManagementServiceTests.UnitTest
             // Act & Assert
             Assert.Throws<ArgumentException>(() => new Order(customerId, restaurantId, new List<OrderItem>()));
         }
-
+        //test when adding an order item 
         [Fact]
         public void AddingOrderItem_ShouldIncreaseOrderItemsCount()
         {
