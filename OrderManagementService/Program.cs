@@ -26,10 +26,13 @@ namespace OrderManagementService
                     sqlOptions => sqlOptions.EnableRetryOnFailure()
                 ));
 
-            // Register IMessageBus with GooglePubSubMessageBus
-            builder.Services.AddSingleton<IMessageBus, GooglePubSubMessageBus>(sp =>
-                new GooglePubSubMessageBus(builder.Configuration["GoogleCloud:ProjectId"]));
-
+            if (!builder.Environment.IsEnvironment("Testing"))
+            {
+                builder.Services.AddSingleton<IMessageBus, GooglePubSubMessageBus>(sp =>
+                    new GooglePubSubMessageBus(builder.Configuration["GoogleCloud:ProjectId"]));
+                builder.Services.AddSingleton<IMessagePublisher, MessagePublisher>();
+            }
+           
             // Register IMessagePublisher with MessagePublisher
             builder.Services.AddSingleton<IMessagePublisher, MessagePublisher>();
 

@@ -45,23 +45,22 @@ namespace OrderManagementServiceTests.IntegrationTest
 
             _factory = factory.WithWebHostBuilder(builder =>
             {
-                builder.UseContentRoot(contentRoot);
-
+                builder.UseEnvironment("Testing");
                 builder.ConfigureServices(services =>
                 {
-                    // Replace DbContext with in-memory database
-                    var descriptor = services.SingleOrDefault(d => d.ServiceType == typeof(DbContextOptions<OrderManagementServiceDbContext>));
+                    // Replace IMessagePublisher with MockMessagePublisher
+                    var descriptor = services.SingleOrDefault(d => d.ServiceType == typeof(IMessagePublisher));
                     if (descriptor != null)
                         services.Remove(descriptor);
 
-                    services.AddDbContext<OrderManagementServiceDbContext>(options => options.UseInMemoryDatabase("IntegrationTestDb"));
+                    services.AddSingleton<IMessagePublisher, MockMessagePublisher>();
 
-                    // Replace IMessagePublisher with MockMessagePublisher
-                    var publisherDescriptor = services.SingleOrDefault(d => d.ServiceType == typeof(IMessagePublisher));
-                    if (publisherDescriptor != null)
-                        services.Remove(publisherDescriptor);
+                    // Replace DbContext with in-memory database
+                    var dbDescriptor = services.SingleOrDefault(d => d.ServiceType == typeof(DbContextOptions<OrderManagementServiceDbContext>));
+                    if (dbDescriptor != null)
+                        services.Remove(dbDescriptor);
 
-                    services.AddSingleton<IMessagePublisher>(_mockPublisher);
+                    services.AddDbContext<OrderManagementServiceDbContext>(options => options.UseInMemoryDatabase("TestDb"));
                 });
             });
 
