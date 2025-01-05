@@ -55,7 +55,7 @@
               "RelativeDocumentMoniker": "..\\OrderManagementServiceTests\\IntergrationTest\\OrdersControllerIntegrationTests.cs",
               "ToolTip": "C:\\Users\\moham\\source\\repos\\Exam\\OrderManagementMicroservice\\OrderManagementServiceTests\\IntergrationTest\\OrdersControllerIntegrationTests.cs",
               "RelativeToolTip": "..\\OrderManagementServiceTests\\IntergrationTest\\OrdersControllerIntegrationTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAawEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-05T11:18:45.748Z",
               "EditorCaption": ""
@@ -70,8 +70,7 @@
               "RelativeToolTip": "Application\\Ports\\IMessagePublisher.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T11:14:29.063Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T11:14:29.063Z"
             }
           ]
         }

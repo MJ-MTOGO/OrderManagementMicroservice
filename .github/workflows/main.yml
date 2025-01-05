@@ -14,13 +14,6 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Step 2: Set Up Google Cloud Credentials for Tests
-      - name: Set Up Google Cloud Credentials
-        run: |
-          echo "${{ secrets.GCP_CREDENTIALS }}" > /tmp/gcloud-key.json
-        env:
-          GOOGLE_APPLICATION_CREDENTIALS: /tmp/gcloud-key.json
-
       # Step 3: Run All Tests
       - name: Run All Tests
         working-directory: ./OrderManagementServiceTests
