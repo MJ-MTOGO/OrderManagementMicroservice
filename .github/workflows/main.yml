@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - TestBranche
+      - testbranche
 
 jobs:
   test-build-deploy:
@@ -14,23 +14,30 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Step 2: Run All Tests
+      # Step 2: Set Up Google Cloud Credentials for Tests
+      - name: Set Up Google Cloud Credentials
+        run: |
+          echo "${{ secrets.GCP_CREDENTIALS }}" > /tmp/gcloud-key.json
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: /tmp/gcloud-key.json
+
+      # Step 3: Run All Tests
       - name: Run All Tests
         working-directory: ./OrderManagementServiceTests
         run: |
-          # Restore dependencies
           dotnet restore OrderManagementServiceTests.csproj
-          # Run all tests with results output
           dotnet test OrderManagementServiceTests.csproj --no-build --verbosity normal --logger:"trx;LogFileName=TestResults.trx"
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: /tmp/gcloud-key.json
 
-      # Step 3: Upload Test Results
+      # Step 4: Upload Test Results
       - name: Upload Test Results
         uses: actions/upload-artifact@v3
         with:
           name: test-results
           path: ./OrderManagementServiceTests/TestResults.trx
 
-      # Remaining Steps (Only on main)
+      # Remaining Steps (Only on main branch)
       - name: Authenticate with GCP
         if: github.ref_name == 'main'
         uses: google-github-actions/auth@v1
