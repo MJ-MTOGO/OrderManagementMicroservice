@@ -18,7 +18,7 @@ namespace OrderManagementService.Infrastructure.Subscribers
         public async Task StartAsync()
 
         {
-            await _messageSubscriber.SubscribeAsync("ready-to-pickup-sub", async (messageData) =>
+            await _messageSubscriber.SubscribeAsync("ready-to-pickup-sub25", async (messageData) =>
                     {
                         Console.WriteLine($"Order sub kørt --444-------------------------------333333------------");
                         // Deserialize the message

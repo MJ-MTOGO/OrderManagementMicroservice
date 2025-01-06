@@ -10,6 +10,7 @@ namespace OrderManagementServiceTests.UnitTest
 {
     public class OrderRepositoryTests
     {
+        // test add order 
         [Fact]
         public async Task AddOrderAsync_ShouldAddOrderToDatabase()
         {
@@ -32,7 +33,7 @@ namespace OrderManagementServiceTests.UnitTest
             // Assert
             Assert.Contains(order, context.Orders);
         }
-
+        // update order
         [Fact]
         public async Task UpdateOrderAsync_ShouldUpdateOrderInDatabase()
         {
