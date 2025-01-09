@@ -29,12 +29,13 @@ namespace OrderManagementServiceTests.TaintTest
         [Fact]
         public async Task CreateOrder_WithMaliciousInput_ShouldReturnBadRequest()
         {
-            // Arrange
+            
+            // Arrange: Input med skadelige værdier
             var maliciousRequest = new CreateOrderRequest
             {
                 CustomerId = Guid.NewGuid(),
                 RestaurantId = Guid.NewGuid(),
-                Street = "123 Main St'; DROP TABLE Orders; --",
+                Street = "123 Main St'; DROP TABLE Orders; --", // Forsøg på SQL-injection
                 City = "",
                 PostalCode = "12345",
                 OrderItems = new List<OrderItemRequest>
@@ -43,13 +44,17 @@ namespace OrderManagementServiceTests.TaintTest
         }
             };
 
-            // Act
+            // Act: Send det skadelige input til controlleren
             var result = await _controller.CreateOrder(maliciousRequest);
 
-            // Assert
+            // Assert: Valider, at API'en returnerer BadRequest og ikke udfører nogen skadelig handling
             var badRequestResult = Assert.IsType<BadRequestObjectResult>(result);
             Assert.Equal("Address fields cannot be empty.", badRequestResult.Value);
+
+            // Verificér, at ingen databasehandlinger blev udført
             _mockOrderRepository.Verify(repo => repo.AddOrderAsync(It.IsAny<Order>()), Times.Never);
+
+            // Verificér, at ingen besked blev publiceret
             _mockMessagePublisher.Verify(pub => pub.PublishOrderCreatedAsync(It.IsAny<Guid>(), It.IsAny<Guid>(), It.IsAny<DeliveryAddress>()), Times.Never);
         }
 
