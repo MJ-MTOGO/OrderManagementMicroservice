@@ -1,0 +1,2096 @@
+{
+  "OrderManagementService.dll": {
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Program.cs": {
+      "OrderManagementService.Program": {
+        "System.Void OrderManagementService.Program::Main(System.String[])": {
+          "Lines": {
+            "17": 3,
+            "18": 3,
+            "23": 3,
+            "24": 3,
+            "25": 3,
+            "26": 0,
+            "27": 3,
+            "30": 3,
+            "31": 6,
+            "34": 3,
+            "37": 3,
+            "38": 3,
+            "41": 3,
+            "42": 3,
+            "45": 3,
+            "46": 3,
+            "47": 3,
+            "51": 3,
+            "52": 3,
+            "53": 3,
+            "54": 3,
+            "55": 3,
+            "56": 3,
+            "57": 3,
+            "58": 3,
+            "59": 6,
+            "60": 6,
+            "62": 3,
+            "63": 3,
+            "64": 3,
+            "65": 6,
+            "68": 3,
+            "69": 3,
+            "71": 3,
+            "73": 3,
+            "74": 3,
+            "75": 3,
+            "78": 3,
+            "79": 3,
+            "80": 3,
+            "81": 3,
+            "82": 3,
+            "85": 3,
+            "87": 3,
+            "89": 3,
+            "91": 3,
+            "94": 3,
+            "95": 3,
+            "96": 3,
+            "97": 3,
+            "98": 3,
+            "100": 6,
+            "101": 6,
+            "102": 6,
+            "103": 3,
+            "105": 3,
+            "106": 3
+          },
+          "Branches": [
+            {
+              "Line": 78,
+              "Offset": 440,
+              "EndOffset": 442,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 3
+            },
+            {
+              "Line": 78,
+              "Offset": 440,
+              "EndOffset": 460,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            },
+            {
+              "Line": 94,
+              "Offset": 514,
+              "EndOffset": 516,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 3
+            },
+            {
+              "Line": 94,
+              "Offset": 514,
+              "EndOffset": 636,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 3
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Migrations\\20241205100507_InitialCreate.cs": {
+      "OrderManagementService.Migrations.InitialCreate": {
+        "System.Void OrderManagementService.Migrations.InitialCreate::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrderManagementService.Migrations.InitialCreate::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "72": 0,
+            "73": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Migrations\\20241205100507_InitialCreate.Designer.cs": {
+      "OrderManagementService.Migrations.InitialCreate": {
+        "System.Void OrderManagementService.Migrations.InitialCreate::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "20": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "26": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "110": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Migrations\\OrderManagementServiceDbContextModelSnapshot.cs": {
+      "OrderManagementService.Migrations.OrderManagementServiceDbContextModelSnapshot": {
+        "System.Void OrderManagementService.Migrations.OrderManagementServiceDbContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "107": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Infrastructure\\OrderManagementServiceDbContext.cs": {
+      "OrderManagementService.Infrastructure.OrderManagementServiceDbContext": {
+        "Microsoft.EntityFrameworkCore.DbSet`1<OrderManagementService.Domain.Entities.Order> OrderManagementService.Infrastructure.OrderManagementServiceDbContext::get_Orders()": {
+          "Lines": {
+            "11": 24
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<OrderManagementService.Domain.Entities.Earning> OrderManagementService.Infrastructure.OrderManagementServiceDbContext::get_Earnings()": {
+          "Lines": {
+            "12": 9
+          },
+          "Branches": []
+        },
+        "System.Void OrderManagementService.Infrastructure.OrderManagementServiceDbContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "20": 1,
+            "22": 1,
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "26": 1,
+            "27": 1,
+            "28": 1,
+            "29": 1,
+            "30": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "37": 2,
+            "38": 2,
+            "41": 1,
+            "42": 1,
+            "43": 1,
+            "44": 1,
+            "45": 1,
+            "46": 1,
+            "47": 1,
+            "48": 1,
+            "49": 1,
+            "50": 1,
+            "51": 1,
+            "52": 1,
+            "53": 1,
+            "54": 1,
+            "55": 1,
+            "56": 1,
+            "57": 1,
+            "58": 2,
+            "60": 1,
+            "61": 1
+          },
+          "Branches": []
+        },
+        "System.Void OrderManagementService.Infrastructure.OrderManagementServiceDbContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<OrderManagementService.Infrastructure.OrderManagementServiceDbContext>)": {
+          "Lines": {
+            "15": 9,
+            "16": 9,
+            "17": 9
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Infrastructure\\Subscribers\\CalculatedEarningsSubscriber.cs": {
+      "OrderManagementService.Infrastructure.Subscribers.CalculatedEarningsSubscriber": {
+        "System.Void OrderManagementService.Infrastructure.Subscribers.CalculatedEarningsSubscriber::.ctor(OrderManagementService.Application.Ports.IMessageBus,System.IServiceProvider)": {
+          "Lines": {
+            "13": 3,
+            "14": 3,
+            "15": 3,
+            "16": 3,
+            "17": 3
+          },
+          "Branches": []
+        }
+      },
+      "OrderManagementService.Infrastructure.Subscribers.CalculatedEarningsSubscriber/<<StartAsync>b__3_0>d": {
+        "System.Void OrderManagementService.Infrastructure.Subscribers.CalculatedEarningsSubscriber/<<StartAsync>b__3_0>d::MoveNext()": {
+          "Lines": {
+            "22": 0,
+            "24": 0,
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "30": 0,
+            "32": 0,
+            "35": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 3
+          },
+          "Branches": [
+            {
+              "Line": 26,
+              "Offset": 43,
+              "EndOffset": 48,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 43,
+              "EndOffset": 322,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "OrderManagementService.Infrastructure.Subscribers.CalculatedEarningsSubscriber/<StartAsync>d__3": {
+        "System.Void OrderManagementService.Infrastructure.Subscribers.CalculatedEarningsSubscriber/<StartAsync>d__3::MoveNext()": {
+          "Lines": {
+            "20": 3,
+            "21": 3,
+            "23": 3,
+            "25": 3,
+            "28": 3,
+            "31": 3,
+            "33": 3,
+            "34": 3,
+            "36": 3,
+            "40": 3,
+            "45": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Infrastructure\\Subscribers\\OrderDeliverySubscriber.cs": {
+      "OrderManagementService.Infrastructure.Subscribers.OrderDeliverySubscriber": {
+        "System.Void OrderManagementService.Infrastructure.Subscribers.OrderDeliverySubscriber::.ctor(OrderManagementService.Application.Ports.IMessageBus,System.IServiceProvider)": {
+          "Lines": {
+            "13": 3,
+            "14": 3,
+            "15": 3,
+            "16": 3,
+            "17": 3
+          },
+          "Branches": []
+        }
+      },
+      "OrderManagementService.Infrastructure.Subscribers.OrderDeliverySubscriber/<<StartAsync>b__3_0>d": {
+        "System.Void OrderManagementService.Infrastructure.Subscribers.OrderDeliverySubscriber/<<StartAsync>b__3_0>d::MoveNext()": {
+          "Lines": {
+            "23": 0,
+            "25": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "46": 3
+          },
+          "Branches": [
+            {
+              "Line": 34,
+              "Offset": 239,
+              "EndOffset": 241,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 239,
+              "EndOffset": 264,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 267,
+              "EndOffset": 272,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 267,
+              "EndOffset": 466,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "OrderManagementService.Infrastructure.Subscribers.OrderDeliverySubscriber/<StartAsync>d__3": {
+        "System.Void OrderManagementService.Infrastructure.Subscribers.OrderDeliverySubscriber/<StartAsync>d__3::MoveNext()": {
+          "Lines": {
+            "20": 3,
+            "22": 3,
+            "24": 3,
+            "26": 3,
+            "27": 3,
+            "31": 3,
+            "32": 3,
+            "40": 3,
+            "45": 3,
+            "48": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Infrastructure\\Subscribers\\ReadyToPickupSubscriber.cs": {
+      "OrderManagementService.Infrastructure.Subscribers.ReadyToPickupSubscriber": {
+        "System.Void OrderManagementService.Infrastructure.Subscribers.ReadyToPickupSubscriber::.ctor(OrderManagementService.Application.Ports.IMessageBus,System.IServiceProvider)": {
+          "Lines": {
+            "12": 3,
+            "13": 3,
+            "14": 3,
+            "15": 3,
+            "16": 3
+          },
+          "Branches": []
+        }
+      },
+      "OrderManagementService.Infrastructure.Subscribers.ReadyToPickupSubscriber/<<StartAsync>b__3_0>d": {
+        "System.Void OrderManagementService.Infrastructure.Subscribers.ReadyToPickupSubscriber/<<StartAsync>b__3_0>d::MoveNext()": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "34": 0,
+            "35": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "50": 3
+          },
+          "Branches": [
+            {
+              "Line": 26,
+              "Offset": 62,
+              "EndOffset": 64,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 62,
+              "EndOffset": 68,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 319,
+              "EndOffset": 321,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 319,
+              "EndOffset": 344,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 347,
+              "EndOffset": 352,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 347,
+              "EndOffset": 546,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "OrderManagementService.Infrastructure.Subscribers.ReadyToPickupSubscriber/<StartAsync>d__3": {
+        "System.Void OrderManagementService.Infrastructure.Subscribers.ReadyToPickupSubscriber/<StartAsync>d__3::MoveNext()": {
+          "Lines": {
+            "20": 3,
+            "21": 3,
+            "24": 3,
+            "28": 3,
+            "32": 3,
+            "33": 3,
+            "36": 3,
+            "44": 3,
+            "49": 3,
+            "51": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Infrastructure\\Publishers\\GooglePubSubMessageBus.cs": {
+      "OrderManagementService.Infrastructure.Publishers.GooglePubSubMessageBus": {
+        "System.Void OrderManagementService.Infrastructure.Publishers.GooglePubSubMessageBus::.ctor(System.String)": {
+          "Lines": {
+            "14": 3,
+            "15": 3,
+            "16": 3,
+            "19": 3,
+            "20": 3,
+            "21": 3
+          },
+          "Branches": []
+        }
+      },
+      "OrderManagementService.Infrastructure.Publishers.GooglePubSubMessageBus/<PublishAsync>d__4": {
+        "System.Void OrderManagementService.Infrastructure.Publishers.GooglePubSubMessageBus/<PublishAsync>d__4::MoveNext()": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "33": 0,
+            "34": 0
+          },
+          "Branches": []
+        }
+      },
+      "OrderManagementService.Infrastructure.Publishers.GooglePubSubMessageBus/<SubscribeAsync>d__5": {
+        "System.Void OrderManagementService.Infrastructure.Publishers.GooglePubSubMessageBus/<SubscribeAsync>d__5::MoveNext()": {
+          "Lines": {
+            "37": 9,
+            "38": 9,
+            "40": 9,
+            "41": 9,
+            "43": 9,
+            "44": 9,
+            "45": 0,
+            "46": 0,
+            "48": 0,
+            "49": 0,
+            "52": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Infrastructure\\Publishers\\MessagePublisher.cs": {
+      "OrderManagementService.Infrastructure.Publishers.MessagePublisher": {
+        "System.Void OrderManagementService.Infrastructure.Publishers.MessagePublisher::.ctor(OrderManagementService.Application.Ports.IMessageBus)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0
+          },
+          "Branches": []
+        }
+      },
+      "OrderManagementService.Infrastructure.Publishers.MessagePublisher/<PublishOrderCreatedAsync>d__2": {
+        "System.Void OrderManagementService.Infrastructure.Publishers.MessagePublisher/<PublishOrderCreatedAsync>d__2::MoveNext()": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Infrastructure\\Adapters\\EarningRepository.cs": {
+      "OrderManagementService.Infrastructure.Adapters.EarningRepository": {
+        "System.Void OrderManagementService.Infrastructure.Adapters.EarningRepository::.ctor(OrderManagementService.Infrastructure.OrderManagementServiceDbContext)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      },
+      "OrderManagementService.Infrastructure.Adapters.EarningRepository/<AddEarningAsync>d__2": {
+        "System.Void OrderManagementService.Infrastructure.Adapters.EarningRepository/<AddEarningAsync>d__2::MoveNext()": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        }
+      },
+      "OrderManagementService.Infrastructure.Adapters.EarningRepository/<GetAllEarnings>d__3": {
+        "System.Void OrderManagementService.Infrastructure.Adapters.EarningRepository/<GetAllEarnings>d__3::MoveNext()": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "29": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Infrastructure\\Adapters\\OrderRepository.cs": {
+      "OrderManagementService.Infrastructure.Adapters.OrderRepository": {
+        "System.Void OrderManagementService.Infrastructure.Adapters.OrderRepository::.ctor(OrderManagementService.Infrastructure.OrderManagementServiceDbContext)": {
+          "Lines": {
+            "12": 9,
+            "13": 9,
+            "14": 9,
+            "15": 9
+          },
+          "Branches": []
+        }
+      },
+      "OrderManagementService.Infrastructure.Adapters.OrderRepository/<AddOrderAsync>d__4": {
+        "System.Void OrderManagementService.Infrastructure.Adapters.OrderRepository/<AddOrderAsync>d__4::MoveNext()": {
+          "Lines": {
+            "33": 5,
+            "34": 5,
+            "35": 5,
+            "36": 5
+          },
+          "Branches": []
+        }
+      },
+      "OrderManagementService.Infrastructure.Adapters.OrderRepository/<GetAllOrders>d__6": {
+        "System.Void OrderManagementService.Infrastructure.Adapters.OrderRepository/<GetAllOrders>d__6::MoveNext()": {
+          "Lines": {
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0
+          },
+          "Branches": []
+        }
+      },
+      "OrderManagementService.Infrastructure.Adapters.OrderRepository/<GetOrderByIdAsync>d__2": {
+        "System.Void OrderManagementService.Infrastructure.Adapters.OrderRepository/<GetOrderByIdAsync>d__2::MoveNext()": {
+          "Lines": {
+            "18": 1,
+            "19": 1,
+            "20": 1,
+            "21": 1,
+            "22": 1
+          },
+          "Branches": []
+        }
+      },
+      "OrderManagementService.Infrastructure.Adapters.OrderRepository/<GetOrdersByRestaurantAndStatusAsync>d__3": {
+        "System.Void OrderManagementService.Infrastructure.Adapters.OrderRepository/<GetOrdersByRestaurantAndStatusAsync>d__3::MoveNext()": {
+          "Lines": {
+            "25": 1,
+            "26": 1,
+            "27": 1,
+            "28": 1,
+            "29": 1,
+            "30": 1
+          },
+          "Branches": []
+        }
+      },
+      "OrderManagementService.Infrastructure.Adapters.OrderRepository/<UpdateOrderAsync>d__5": {
+        "System.Void OrderManagementService.Infrastructure.Adapters.OrderRepository/<UpdateOrderAsync>d__5::MoveNext()": {
+          "Lines": {
+            "39": 1,
+            "40": 1,
+            "41": 1,
+            "42": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Domain\\ValueObjects\\DeliveryAddress.cs": {
+      "OrderManagementService.Domain.ValueObjects.DeliveryAddress": {
+        "System.String OrderManagementService.Domain.ValueObjects.DeliveryAddress::get_Street()": {
+          "Lines": {
+            "5": 4
+          },
+          "Branches": []
+        },
+        "System.String OrderManagementService.Domain.ValueObjects.DeliveryAddress::get_City()": {
+          "Lines": {
+            "6": 3
+          },
+          "Branches": []
+        },
+        "System.String OrderManagementService.Domain.ValueObjects.DeliveryAddress::get_PostalCode()": {
+          "Lines": {
+            "7": 3
+          },
+          "Branches": []
+        },
+        "System.Void OrderManagementService.Domain.ValueObjects.DeliveryAddress::.ctor(System.String,System.String,System.String)": {
+          "Lines": {
+            "9": 3,
+            "10": 3,
+            "11": 3,
+            "12": 3,
+            "13": 3,
+            "14": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Domain\\Entities\\Earning.cs": {
+      "OrderManagementService.Domain.Entities.Earning": {
+        "System.Guid OrderManagementService.Domain.Entities.Earning::get_EarningId()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.Guid OrderManagementService.Domain.Entities.Earning::get_OrderId()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.Decimal OrderManagementService.Domain.Entities.Earning::get_MtogoEarning()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Decimal OrderManagementService.Domain.Entities.Earning::get_RestaurantEarning()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Decimal OrderManagementService.Domain.Entities.Earning::get_AgentEarning()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Domain\\Entities\\Order.cs": {
+      "OrderManagementService.Domain.Entities.Order": {
+        "System.Guid OrderManagementService.Domain.Entities.Order::get_OrderId()": {
+          "Lines": {
+            "10": 28
+          },
+          "Branches": []
+        },
+        "System.Guid OrderManagementService.Domain.Entities.Order::get_CustomerId()": {
+          "Lines": {
+            "11": 22
+          },
+          "Branches": []
+        },
+        "System.Guid OrderManagementService.Domain.Entities.Order::get_RestaurantId()": {
+          "Lines": {
+            "12": 25
+          },
+          "Branches": []
+        },
+        "System.DateTime OrderManagementService.Domain.Entities.Order::get_OrderedTime()": {
+          "Lines": {
+            "13": 21
+          },
+          "Branches": []
+        },
+        "System.Decimal OrderManagementService.Domain.Entities.Order::get_TotalPrice()": {
+          "Lines": {
+            "14": 18
+          },
+          "Branches": []
+        },
+        "System.String OrderManagementService.Domain.Entities.Order::get_OrderStatus()": {
+          "Lines": {
+            "15": 37
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IReadOnlyCollection`1<OrderManagementService.Domain.Entities.OrderItem> OrderManagementService.Domain.Entities.Order::get_OrderItems()": {
+          "Lines": {
+            "18": 10
+          },
+          "Branches": []
+        },
+        "System.Void OrderManagementService.Domain.Entities.Order::AddOrderItem(OrderManagementService.Domain.Entities.OrderItem)": {
+          "Lines": {
+            "56": 1,
+            "57": 1,
+            "58": 0,
+            "60": 1,
+            "61": 1
+          },
+          "Branches": [
+            {
+              "Line": 57,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 57,
+              "Offset": 7,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void OrderManagementService.Domain.Entities.Order::RemoveOrderItem(OrderManagementService.Domain.Entities.OrderItem)": {
+          "Lines": {
+            "64": 2,
+            "65": 2,
+            "66": 0,
+            "68": 2,
+            "69": 2
+          },
+          "Branches": [
+            {
+              "Line": 65,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 65,
+              "Offset": 7,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        },
+        "System.Void OrderManagementService.Domain.Entities.Order::MarkAsDelivered()": {
+          "Lines": {
+            "72": 4,
+            "73": 4,
+            "74": 1,
+            "76": 3,
+            "77": 3
+          },
+          "Branches": [
+            {
+              "Line": 73,
+              "Offset": 19,
+              "EndOffset": 21,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 73,
+              "Offset": 19,
+              "EndOffset": 32,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            }
+          ]
+        },
+        "System.Void OrderManagementService.Domain.Entities.Order::MarkAsReadyToPickup()": {
+          "Lines": {
+            "79": 3,
+            "80": 3,
+            "81": 1,
+            "83": 2,
+            "84": 2
+          },
+          "Branches": [
+            {
+              "Line": 80,
+              "Offset": 19,
+              "EndOffset": 21,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 80,
+              "Offset": 19,
+              "EndOffset": 32,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        },
+        "System.Void OrderManagementService.Domain.Entities.Order::.ctor()": {
+          "Lines": {
+            "17": 20,
+            "20": 3
+          },
+          "Branches": []
+        },
+        "System.Void OrderManagementService.Domain.Entities.Order::.ctor(System.Guid,System.Guid,System.Guid,System.DateTime,System.String,System.Collections.Generic.List`1<OrderManagementService.Domain.Entities.OrderItem>)": {
+          "Lines": {
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0
+          },
+          "Branches": [
+            {
+              "Line": 36,
+              "Offset": 56,
+              "EndOffset": 58,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 56,
+              "EndOffset": 70,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 37,
+              "Offset": 80,
+              "EndOffset": 82,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 37,
+              "Offset": 80,
+              "EndOffset": 94,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void OrderManagementService.Domain.Entities.Order::.ctor(System.Guid,System.Guid,System.Collections.Generic.List`1<OrderManagementService.Domain.Entities.OrderItem>)": {
+          "Lines": {
+            "41": 19,
+            "42": 19,
+            "43": 19,
+            "44": 1,
+            "46": 18,
+            "47": 18,
+            "48": 18,
+            "49": 18,
+            "50": 18,
+            "52": 18,
+            "53": 18
+          },
+          "Branches": [
+            {
+              "Line": 43,
+              "Offset": 20,
+              "EndOffset": 22,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 19
+            },
+            {
+              "Line": 43,
+              "Offset": 20,
+              "EndOffset": 33,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 43,
+              "Offset": 36,
+              "EndOffset": 38,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 43,
+              "Offset": 36,
+              "EndOffset": 49,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 18
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Domain\\Entities\\OrderItem.cs": {
+      "OrderManagementService.Domain.Entities.OrderItem": {
+        "System.String OrderManagementService.Domain.Entities.OrderItem::get_Name()": {
+          "Lines": {
+            "5": 35
+          },
+          "Branches": []
+        },
+        "System.Decimal OrderManagementService.Domain.Entities.OrderItem::get_Price()": {
+          "Lines": {
+            "6": 47
+          },
+          "Branches": []
+        },
+        "System.Void OrderManagementService.Domain.Entities.OrderItem::.ctor()": {
+          "Lines": {
+            "8": 6
+          },
+          "Branches": []
+        },
+        "System.Void OrderManagementService.Domain.Entities.OrderItem::.ctor(System.String,System.Decimal)": {
+          "Lines": {
+            "10": 27,
+            "11": 27,
+            "12": 27,
+            "13": 27,
+            "14": 27
+          },
+          "Branches": [
+            {
+              "Line": 12,
+              "Offset": 11,
+              "EndOffset": 13,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 12,
+              "Offset": 11,
+              "EndOffset": 25,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 27
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Controllers\\EaringsController.cs": {
+      "OrderManagementService.Controllers.EaringsController": {
+        "System.Void OrderManagementService.Controllers.EaringsController::.ctor(OrderManagementService.Application.Ports.IEarningRepository)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      },
+      "OrderManagementService.Controllers.EaringsController/<GetAllEarnings>d__2": {
+        "System.Void OrderManagementService.Controllers.EaringsController/<GetAllEarnings>d__2::MoveNext()": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": [
+            {
+              "Line": 22,
+              "Offset": 151,
+              "EndOffset": 153,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 22,
+              "Offset": 164,
+              "EndOffset": 166,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 22,
+              "Offset": 151,
+              "EndOffset": 189,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 22,
+              "Offset": 164,
+              "EndOffset": 189,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Controllers\\OrdersController.cs": {
+      "OrderManagementService.Controllers.OrdersController": {
+        "System.Void OrderManagementService.Controllers.OrdersController::.ctor(OrderManagementService.Application.Ports.IOrderRepository,OrderManagementService.Application.Ports.IMessagePublisher)": {
+          "Lines": {
+            "16": 6,
+            "17": 6,
+            "18": 6,
+            "19": 6,
+            "20": 6
+          },
+          "Branches": []
+        }
+      },
+      "OrderManagementService.Controllers.OrdersController/<>c": {
+        "System.Boolean OrderManagementService.Controllers.OrdersController/<>c::<CreateOrder>b__3_1(OrderManagementService.Application.DTOs.OrderItemRequest)": {
+          "Lines": {
+            "38": 8
+          },
+          "Branches": [
+            {
+              "Line": 38,
+              "Offset": 11,
+              "EndOffset": 13,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 5
+            },
+            {
+              "Line": 38,
+              "Offset": 11,
+              "EndOffset": 31,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "OrderManagementService.Domain.Entities.OrderItem OrderManagementService.Controllers.OrdersController/<>c::<CreateOrder>b__3_0(OrderManagementService.Application.DTOs.OrderItemRequest)": {
+          "Lines": {
+            "45": 5
+          },
+          "Branches": []
+        }
+      },
+      "OrderManagementService.Controllers.OrdersController/<CreateOrder>d__3": {
+        "System.Void OrderManagementService.Controllers.OrdersController/<CreateOrder>d__3::MoveNext()": {
+          "Lines": {
+            "24": 5,
+            "26": 5,
+            "27": 0,
+            "30": 5,
+            "31": 5,
+            "32": 5,
+            "33": 2,
+            "34": 2,
+            "39": 0,
+            "40": 0,
+            "44": 3,
+            "46": 3,
+            "49": 3,
+            "52": 3,
+            "55": 3,
+            "58": 3,
+            "61": 3,
+            "62": 5
+          },
+          "Branches": [
+            {
+              "Line": 26,
+              "Offset": 35,
+              "EndOffset": 37,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 5
+            },
+            {
+              "Line": 26,
+              "Offset": 48,
+              "EndOffset": 50,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 5
+            },
+            {
+              "Line": 26,
+              "Offset": 35,
+              "EndOffset": 71,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 48,
+              "EndOffset": 71,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 74,
+              "EndOffset": 76,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 74,
+              "EndOffset": 98,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 5
+            },
+            {
+              "Line": 30,
+              "Offset": 114,
+              "EndOffset": 116,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 4
+            },
+            {
+              "Line": 30,
+              "Offset": 132,
+              "EndOffset": 134,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 3
+            },
+            {
+              "Line": 30,
+              "Offset": 114,
+              "EndOffset": 152,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 2
+            },
+            {
+              "Line": 30,
+              "Offset": 132,
+              "EndOffset": 152,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 2
+            },
+            {
+              "Line": 30,
+              "Offset": 155,
+              "EndOffset": 157,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 2
+            },
+            {
+              "Line": 30,
+              "Offset": 155,
+              "EndOffset": 180,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 3
+            },
+            {
+              "Line": 38,
+              "Offset": 231,
+              "EndOffset": 233,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 231,
+              "EndOffset": 256,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 3
+            }
+          ]
+        }
+      },
+      "OrderManagementService.Controllers.OrdersController/<GetAllOrders>d__5": {
+        "System.Void OrderManagementService.Controllers.OrdersController/<GetAllOrders>d__5::MoveNext()": {
+          "Lines": {
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0
+          },
+          "Branches": [
+            {
+              "Line": 78,
+              "Offset": 151,
+              "EndOffset": 153,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 78,
+              "Offset": 164,
+              "EndOffset": 166,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 78,
+              "Offset": 151,
+              "EndOffset": 189,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 78,
+              "Offset": 164,
+              "EndOffset": 189,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "OrderManagementService.Controllers.OrdersController/<GetOrderById>d__4": {
+        "System.Void OrderManagementService.Controllers.OrdersController/<GetOrderById>d__4::MoveNext()": {
+          "Lines": {
+            "68": 1,
+            "69": 1,
+            "70": 1,
+            "71": 1
+          },
+          "Branches": [
+            {
+              "Line": 70,
+              "Offset": 157,
+              "EndOffset": 159,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 70,
+              "Offset": 157,
+              "EndOffset": 182,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "OrderManagementService.Controllers.OrdersController/<GetPendingOrdersById>d__6": {
+        "System.Void OrderManagementService.Controllers.OrdersController/<GetPendingOrdersById>d__6::MoveNext()": {
+          "Lines": {
+            "86": 0,
+            "87": 0,
+            "89": 0,
+            "90": 0,
+            "92": 0,
+            "93": 0
+          },
+          "Branches": [
+            {
+              "Line": 89,
+              "Offset": 162,
+              "EndOffset": 164,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 89,
+              "Offset": 162,
+              "EndOffset": 180,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 89,
+              "Offset": 185,
+              "EndOffset": 187,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 89,
+              "Offset": 185,
+              "EndOffset": 206,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Controllers\\PaymentController.cs": {
+      "OrderManagementService.Controllers.PaymentController": {
+        "Microsoft.AspNetCore.Mvc.IActionResult OrderManagementService.Controllers.PaymentController::ProcessPayment(OrderManagementService.Application.DTOs.PaymentRequest)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrderManagementService.Controllers.PaymentController::.ctor(OrderManagementService.Application.Ports.IPaymentService)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Application\\Validators\\CreateOrderValidator.cs": {
+      "OrderManagementService.Application.Validators.CreateOrderValidator": {
+        "System.Void OrderManagementService.Application.Validators.CreateOrderValidator::ValidateStreet(System.String)": {
+          "Lines": {
+            "9": 5,
+            "10": 5,
+            "11": 1,
+            "12": 1,
+            "15": 4,
+            "16": 1,
+            "17": 1,
+            "19": 3
+          },
+          "Branches": [
+            {
+              "Line": 10,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 10,
+              "Offset": 9,
+              "EndOffset": 23,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 4
+            },
+            {
+              "Line": 15,
+              "Offset": 38,
+              "EndOffset": 40,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 15,
+              "Offset": 38,
+              "EndOffset": 52,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 3
+            }
+          ]
+        },
+        "System.Void OrderManagementService.Application.Validators.CreateOrderValidator::ValidateCity(System.String)": {
+          "Lines": {
+            "22": 2,
+            "23": 2,
+            "24": 1,
+            "25": 1,
+            "27": 1
+          },
+          "Branches": [
+            {
+              "Line": 23,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 23,
+              "Offset": 9,
+              "EndOffset": 23,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void OrderManagementService.Application.Validators.CreateOrderValidator::ValidatePostalCode(System.String)": {
+          "Lines": {
+            "30": 5,
+            "31": 5,
+            "32": 0,
+            "33": 0,
+            "36": 5,
+            "37": 3,
+            "38": 3,
+            "40": 2
+          },
+          "Branches": [
+            {
+              "Line": 31,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 9,
+              "EndOffset": 23,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 5
+            },
+            {
+              "Line": 36,
+              "Offset": 39,
+              "EndOffset": 41,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 3
+            },
+            {
+              "Line": 36,
+              "Offset": 39,
+              "EndOffset": 53,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            }
+          ]
+        },
+        "System.Void OrderManagementService.Application.Validators.CreateOrderValidator::ValidateOrderItems(System.Collections.Generic.List`1<OrderManagementService.Application.DTOs.OrderItemRequest>)": {
+          "Lines": {
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "60": 0,
+            "61": 0
+          },
+          "Branches": [
+            {
+              "Line": 44,
+              "Offset": 2,
+              "EndOffset": 4,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 2,
+              "EndOffset": 15,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 18,
+              "EndOffset": 20,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 18,
+              "EndOffset": 32,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 120,
+              "EndOffset": 42,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 51,
+              "Offset": 64,
+              "EndOffset": 66,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 51,
+              "Offset": 64,
+              "EndOffset": 78,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 56,
+              "Offset": 98,
+              "EndOffset": 100,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 56,
+              "Offset": 98,
+              "EndOffset": 112,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 120,
+              "EndOffset": 122,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void OrderManagementService.Application.Validators.CreateOrderValidator::Validate(OrderManagementService.Application.DTOs.CreateOrderRequest)": {
+          "Lines": {
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Application\\Services\\EarningService.cs": {
+      "OrderManagementService.Application.Services.EarningService": {
+        "System.Void OrderManagementService.Application.Services.EarningService::.ctor(OrderManagementService.Application.Ports.IEarningRepository)": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      },
+      "OrderManagementService.Application.Services.EarningService/<ProcessCalculatedEarningsAsync>d__2": {
+        "System.Void OrderManagementService.Application.Services.EarningService/<ProcessCalculatedEarningsAsync>d__2::MoveNext()": {
+          "Lines": {
+            "18": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Application\\Services\\PaymentService.cs": {
+      "OrderManagementService.Application.Services.PaymentService": {
+        "OrderManagementService.Application.DTOs.PaymentResponse OrderManagementService.Application.Services.PaymentService::ProcessPayment(OrderManagementService.Application.DTOs.PaymentRequest)": {
+          "Lines": {
+            "9": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Application\\DTOs\\CreateOrderRequest.cs": {
+      "OrderManagementService.Application.DTOs.CreateOrderRequest": {
+        "System.Guid OrderManagementService.Application.DTOs.CreateOrderRequest::get_CustomerId()": {
+          "Lines": {
+            "5": 17
+          },
+          "Branches": []
+        },
+        "System.Guid OrderManagementService.Application.DTOs.CreateOrderRequest::get_RestaurantId()": {
+          "Lines": {
+            "6": 18
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<OrderManagementService.Application.DTOs.OrderItemRequest> OrderManagementService.Application.DTOs.CreateOrderRequest::get_OrderItems()": {
+          "Lines": {
+            "7": 38
+          },
+          "Branches": []
+        },
+        "System.String OrderManagementService.Application.DTOs.CreateOrderRequest::get_Street()": {
+          "Lines": {
+            "8": 31
+          },
+          "Branches": []
+        },
+        "System.String OrderManagementService.Application.DTOs.CreateOrderRequest::get_City()": {
+          "Lines": {
+            "9": 29
+          },
+          "Branches": []
+        },
+        "System.String OrderManagementService.Application.DTOs.CreateOrderRequest::get_PostalCode()": {
+          "Lines": {
+            "10": 28
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Application\\DTOs\\OrderDeliveryMessage.cs": {
+      "OrderManagementService.Application.DTOs.OrderDeliveryMessage": {
+        "System.Guid OrderManagementService.Application.DTOs.OrderDeliveryMessage::get_Id()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.Guid OrderManagementService.Application.DTOs.OrderDeliveryMessage::get_OrderId()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.Guid OrderManagementService.Application.DTOs.OrderDeliveryMessage::get_AgentId()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime OrderManagementService.Application.DTOs.OrderDeliveryMessage::get_DeliveringDatetime()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String OrderManagementService.Application.DTOs.OrderDeliveryMessage::get_DeliveringAddress()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Application\\DTOs\\OrderItemRequest.cs": {
+      "OrderManagementService.Application.DTOs.OrderItemRequest": {
+        "System.String OrderManagementService.Application.DTOs.OrderItemRequest::get_Name()": {
+          "Lines": {
+            "5": 32
+          },
+          "Branches": []
+        },
+        "System.Decimal OrderManagementService.Application.DTOs.OrderItemRequest::get_Price()": {
+          "Lines": {
+            "6": 32
+          },
+          "Branches": []
+        },
+        "System.Void OrderManagementService.Application.DTOs.OrderItemRequest::.ctor(System.String,System.Decimal)": {
+          "Lines": {
+            "8": 12,
+            "9": 12,
+            "10": 12,
+            "11": 12,
+            "12": 12
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Application\\DTOs\\PaymentRequest.cs": {
+      "OrderManagementService.Application.DTOs.PaymentRequest": {
+        "System.String OrderManagementService.Application.DTOs.PaymentRequest::get_OrderId()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.Decimal OrderManagementService.Application.DTOs.PaymentRequest::get_Amount()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String OrderManagementService.Application.DTOs.PaymentRequest::get_PaymentMethod()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Application\\DTOs\\PaymentResponse.cs": {
+      "OrderManagementService.Application.DTOs.PaymentResponse": {
+        "System.String OrderManagementService.Application.DTOs.PaymentResponse::get_TransactionId()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String OrderManagementService.Application.DTOs.PaymentResponse::get_Message()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Boolean> OrderManagementService.Application.DTOs.PaymentResponse::get_IsAccepted()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementService\\Application\\DTOs\\ReadyToPickup.cs": {
+      "OrderManagementService.Application.DTOs.ReadyToPickup": {
+        "System.Guid OrderManagementService.Application.DTOs.ReadyToPickup::get_OrderId()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.Void OrderManagementService.Application.DTOs.ReadyToPickup::.ctor(System.Guid)": {
+          "Lines": {
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}
