@@ -47,8 +47,7 @@
               "RelativeToolTip": "..\\OrderManagementServiceTests\\TaintTest\\OrdersControllerTaintTests.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T06:12:33.14Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T06:12:33.14Z"
             },
             {
               "$type": "Document",
@@ -60,8 +59,7 @@
               "RelativeToolTip": "..\\OrderManagementServiceTests\\UnitTest\\CreateOrderValidatorTests.cs",
               "ViewState": "AgIAAFcAAAAAAAAAAAAAACgAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T05:17:23.611Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T05:17:23.611Z"
             },
             {
               "$type": "Document",
@@ -73,8 +71,7 @@
               "RelativeToolTip": "Application\\Validators\\CreateOrderValidator.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAEUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T05:16:47.642Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T05:16:47.642Z"
             },
             {
               "$type": "Document",
@@ -86,8 +83,7 @@
               "RelativeToolTip": "..\\OrderManagementServiceTests\\UnitTest\\OrderUnitTests.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T03:48:46.191Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T03:48:46.191Z"
             },
             {
               "$type": "Document",
@@ -97,7 +93,7 @@
               "RelativeDocumentMoniker": "..\\OrderManagementServiceTests\\TaintTest\\OrderRepositoryTaintTests.cs",
               "ToolTip": "C:\\Users\\jamala\\CphBusiness\\GithubProjekter\\6_Semester\\OrderManagementMicroservice\\OrderManagementServiceTests\\TaintTest\\OrderRepositoryTaintTests.cs",
               "RelativeToolTip": "..\\OrderManagementServiceTests\\TaintTest\\OrderRepositoryTaintTests.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-09T04:21:57.693Z",
               "EditorCaption": ""
@@ -112,8 +108,7 @@
               "RelativeToolTip": "..\\OrderManagementServiceTests\\UnitTest\\OrderRepositoryTests.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T04:22:18.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T04:22:18.491Z"
             },
             {
               "$type": "Document",
@@ -125,8 +120,7 @@
               "RelativeToolTip": "..\\OrderManagementServiceTests\\Mock\\MockMessagePublisher.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T04:11:19.912Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T04:11:19.912Z"
             },
             {
               "$type": "Document",
@@ -138,8 +132,7 @@
               "RelativeToolTip": "..\\OrderManagementServiceTests\\IntergrationTest\\OrdersControllerIntegrationTests.cs",
               "ViewState": "AgIAAEMAAAAAAAAAAAAQwJMAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T03:50:15.072Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T03:50:15.072Z"
             }
           ]
         }
