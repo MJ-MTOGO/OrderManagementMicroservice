@@ -19,78 +19,74 @@ namespace OrderManagementService
 
             // Add services to the container.
 
-            // Register DbContext with the connection string
+            // Register DbContext with connection string
             builder.Services.AddDbContext<OrderManagementServiceDbContext>(options =>
                 options.UseSqlServer(
                     builder.Configuration.GetConnectionString("DefaultConnection"),
                     sqlOptions => sqlOptions.EnableRetryOnFailure()
                 ));
 
-            // Register IMessageBus with GooglePubSubMessageBus
+            // Register Google Pub/Sub Message Bus
             builder.Services.AddSingleton<IMessageBus, GooglePubSubMessageBus>(sp =>
                 new GooglePubSubMessageBus(builder.Configuration["GoogleCloud:ProjectId"]));
 
-            // Register IMessagePublisher with MessagePublisher
+            // Register Publisher and other required services
             builder.Services.AddSingleton<IMessagePublisher, MessagePublisher>();
-
-            // Register IOrderRepository with its implementation
             builder.Services.AddScoped<IOrderRepository, OrderRepository>();
             builder.Services.AddScoped<IPaymentService, PaymentService>();
-
-            // Register IEarningService and IEarningRepository for the CalculatedEarningsSubscriber
             builder.Services.AddScoped<IEarningService, EarningService>();
             builder.Services.AddScoped<IEarningRepository, EarningRepository>();
 
-            // Register Subscribers as singletons
+            // Register subscribers
             builder.Services.AddSingleton<OrderDeliverySubscriber>();
             builder.Services.AddSingleton<ReadyToPickupSubscriber>();
             builder.Services.AddSingleton<CalculatedEarningsSubscriber>();
 
-            // Add CORS policy
-
+            // Configure CORS policy
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowFrontend", policy =>
                 {
-                    policy.WithOrigins("http://localhost:3000") // Your frontend URL
+                    policy.WithOrigins("http://localhost:3000") // Replace with your frontend URL
                           .AllowAnyHeader()
                           .AllowAnyMethod()
-                          .AllowCredentials(); // Add if credentials like cookies are needed
+                          .AllowCredentials();
                 });
             });
 
+            // Add Controllers and configure JSON options
             builder.Services.AddControllers().AddJsonOptions(options =>
             {
                 options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
             });
 
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            // Add Swagger/OpenAPI support
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            // Build the application
             var app = builder.Build();
 
-            app.UseMetricServer(); // Dette aktiverer /metrics endpoint
-            app.UseHttpMetrics(); // Overvåger HTTP-forespørgsler
+            // Enable Prometheus metrics
+            app.UseMetricServer(); // Exposes /metrics endpoint
+            app.UseHttpMetrics(); // Monitors HTTP requests
             app.MapGet("/", () => "Hello, Prometheus!");
 
-            // Configure the HTTP request pipeline.
+            // Configure HTTP request pipeline
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
 
-            // Use the CORS policy
+            // Use the configured CORS policy
             app.UseCors("AllowFrontend");
 
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
-
             app.MapControllers();
 
-            // Conditionally start subscribers
+            // Conditionally start subscribers (except in Testing environment)
             if (!app.Environment.IsEnvironment("Testing"))
             {
                 var orderDeliverySubscriber = app.Services.GetRequiredService<OrderDeliverySubscriber>();
