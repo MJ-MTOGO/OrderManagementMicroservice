@@ -21,7 +21,13 @@ jobs:
         env:
           GOOGLE_APPLICATION_CREDENTIALS: /tmp/gcloud-key.json
 
-      # Step 3: Run All Tests
+      # Step 3: Validate JSON Key File
+      - name: Validate JSON Key File
+        run: jq . /tmp/gcloud-key.json
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: /tmp/gcloud-key.json
+
+      # Step 4: Run All Tests
       - name: Run All Tests
         working-directory: ./OrderManagementServiceTests
         run: |
@@ -30,20 +36,21 @@ jobs:
         env:
           GOOGLE_APPLICATION_CREDENTIALS: /tmp/gcloud-key.json
 
-      # Step 4: Upload Test Results
+      # Step 5: Upload Test Results
       - name: Upload Test Results
         uses: actions/upload-artifact@v3
         with:
           name: test-results
           path: ./OrderManagementServiceTests/TestResults.trx
 
-      # Remaining Steps (Only on main branch)
+      # Step 6: Authenticate with GCP (only on main branch)
       - name: Authenticate with GCP
         if: github.ref_name == 'main'
         uses: google-github-actions/auth@v1
         with:
           credentials_json: ${{ secrets.GCP_CREDENTIALS }}
 
+      # Step 7: Install gke-gcloud-auth-plugin (only on main branch)
       - name: Install gke-gcloud-auth-plugin
         if: github.ref_name == 'main'
         run: |
@@ -52,14 +59,17 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y google-cloud-sdk-gke-gcloud-auth-plugin
 
+      # Step 8: Configure kubectl (only on main branch)
       - name: Configure kubectl
         if: github.ref_name == 'main'
         run: gcloud container clusters get-credentials cluster-1 --region europe-north1-a
 
+      # Step 9: Configure Docker (only on main branch)
       - name: Configure Docker
         if: github.ref_name == 'main'
         run: gcloud auth configure-docker
 
+      # Step 10: Build and Push Docker Image (only on main branch)
       - name: Build and Push Docker Image
         if: github.ref_name == 'main'
         working-directory: ./OrderManagementService
@@ -67,9 +77,14 @@ jobs:
           docker build -t gcr.io/mtogov1/order-management-service:latest -f Dockerfile .
           docker push gcr.io/mtogov1/order-management-service:latest
 
+      # Step 11: Deploy to Kubernetes (only on main branch)
       - name: Deploy to Kubernetes
         if: github.ref_name == 'main'
         working-directory: ./kubernetes-configs
         run: |
           kubectl apply -f deployment.yaml --validate=false
           kubectl apply -f service.yaml --validate=false
+
+      # Step 12: Clean Up Credentials
+      - name: Clean Up Credentials
+        run: rm -f /tmp/gcloud-key.json
