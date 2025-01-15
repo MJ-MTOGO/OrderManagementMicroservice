@@ -21,11 +21,7 @@ jobs:
         env:
           GOOGLE_APPLICATION_CREDENTIALS: /tmp/gcloud-key.json
 
-      # Step 3: Validate JSON Key File
-      - name: Validate JSON Key File
-        run: jq . /tmp/gcloud-key.json
-        env:
-          GOOGLE_APPLICATION_CREDENTIALS: /tmp/gcloud-key.json
+
 
       # Step 4: Run All Tests
       - name: Run All Tests
