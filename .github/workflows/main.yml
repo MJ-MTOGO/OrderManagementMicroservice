@@ -58,7 +58,7 @@ jobs:
       # Step 8: Configure kubectl (only on main branch)
       - name: Configure kubectl
         if: github.ref_name == 'main'
-        run: gcloud container clusters get-credentials cluster-1 --region europe-north1-a
+        run: gcloud container clusters get-credentials mtogov1-clusterv2 --region europe-north1-a
 
       # Step 9: Configure Docker (only on main branch)
       - name: Configure Docker
