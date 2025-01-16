@@ -77,10 +77,11 @@ Denne løsning er ikke kun en funktionel prototype, men også et grundlag for fr
 ---
 
 ## 📂 **Bilag**
-1. ![Context Diagram](/mtogoContainDiagram.png)
-2. **High View Diagram**
-3. **Event Storming Terminology**
-4. **Event Storming Workflows**
+1.**Contain Diagram**
+ ![Context Diagram](/mtogoContainDiagram.png)
+3. **High View Diagram**
+4. **Event Storming Terminology**
+5. **Event Storming Workflows**
 
 ---
 
