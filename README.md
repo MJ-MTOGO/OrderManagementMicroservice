@@ -77,13 +77,13 @@ Denne løsning er ikke kun en funktionel prototype, men også et grundlag for fr
 
 ## 📂 **Bilag**
 1. **Contain Diagram**
-   - ![Contain Diagram](./Diagrams/mtogoContainDiagram.png)
+   - ![Contain Diagram](./Diagram/mtogoContainDiagram.png)
 2. **High View Diagram**
    - (Upload mangler link)
 3. **Event Storming Terminology**
-   - ![Terminology](./Diagrams/Terminology.png)
+   - ![Terminology](./Diagram/Terminology.png)
 4. **Event Storming Workflows**
-   - ![Event Storming Workflows](./Diagrams/Miro2.png)
+   - ![Event Storming Workflows](./Diagram/Miro2.png)
 
 ---
 
